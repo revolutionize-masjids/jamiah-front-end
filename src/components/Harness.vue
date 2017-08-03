@@ -20,7 +20,9 @@
       </div>
 
       <div class="md-toolbar-container">
-        <h2 class="md-title">East Elmhurst Jam-E Muslim Center</h2>
+        <router-link to="home" class="md-title">
+          East Elmhurst Jam-E Muslim Center
+        </router-link>
       </div>
     </md-toolbar>
     <router-view></router-view>
