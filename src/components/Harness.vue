@@ -1,3 +1,5 @@
+<!-- define the "outer shell" of the app -->
+
 <template>
   <div>
     <md-toolbar class="md-large">
@@ -8,12 +10,12 @@
 
         <span style="flex: 1;"></span>
 
-        <md-button class="md-icon-button">
-          <md-icon>search</md-icon>
+        <md-button>
+          Login
         </md-button>
 
-        <md-button class="md-icon-button">
-          <md-icon>filter_list</md-icon>
+        <md-button>
+          Sign Up
         </md-button>
       </div>
 
