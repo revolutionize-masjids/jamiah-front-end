@@ -4,7 +4,7 @@ import Vue from 'vue'
 
 import App from '@/App'
 import router from '@/router'
-import '@/theme'
+import '@/lib/theme'
 
 Vue.config.productionTip = false
 
