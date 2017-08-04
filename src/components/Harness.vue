@@ -4,60 +4,25 @@
 <template>
   <div>
     <!-- Top navigation bar that contains title and essential buttons and info. Logging in, signing up, account info, open drawer button, etc. -->
-    <md-toolbar class="md-medium md-primary">
-      <div class="md-toolbar-container">
-        <md-button class="md-icon-button" @click.native="openNavDrawer()">
-          <md-icon>menu</md-icon>
-        </md-button>
+    <!-- Listen for the open nav drawer event -->
+    <NavToolbar @onOpenNavDrawer="openNavDrawer()" />
 
-        <span style="flex: 1;"></span>
-
-        <md-button>
-          Blog
-        </md-button>
-
-        <md-button>
-          <md-icon>favorite</md-icon>
-          <span>Donate</span>
-          <md-tooltip>Give Sadaqah</md-tooltip>
-        </md-button>
-
-        <md-button>
-          <md-icon>place</md-icon>
-          <span>Address</span>
-          <md-tooltip>Masjid Location</md-tooltip>
-        </md-button>
-
-        <md-button>
-          Login
-        </md-button>
-
-        <md-button>
-          <router-link to="signup">Sign Up</router-link>
-        </md-button>
-      </div>
-
-      <div class="md-toolbar-container">
-        <!-- Take users back to home page -->
-        <router-link to="/" class="md-title">
-          East Elmhurst Jam-E Muslim Center
-        </router-link>
-      </div>
-    </md-toolbar>
-
+    <!-- App-wide navigation drawer (sidebar) that slides from the left of the screen -->
     <NavDrawer ref="navDrawer" />
 
-    <!-- All components will be rendered here (such as home) -->
+    <!-- All content components will be rendered here (such as home) -->
     <router-view></router-view>
   </div>
 </template>
 
 <script>
   import NavDrawer from '@/components/NavDrawer'
+  import NavToolbar from '@/components/NavToolbar'
 
   export default {
     components: {
-      NavDrawer
+      NavDrawer,
+      NavToolbar
     },
     methods: {
       // handle opening the navigation drawer on the left

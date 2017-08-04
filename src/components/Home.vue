@@ -3,11 +3,12 @@
 <template>
   <md-layout md-column>
     <md-layout>
-      <!-- Updates Card -->
+      <!-- News & Updates -->
       <md-layout md-flex="70">
         <Updates />
       </md-layout>
-      <!-- Prayer Schedule -->
+
+      <!-- Prayer Times -->
       <md-layout md-flex="30">
         <PrayerSchedule />
       </md-layout>
