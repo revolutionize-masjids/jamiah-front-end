@@ -15,7 +15,7 @@
         </md-button>
 
         <md-button>
-          Sign Up
+          <router-link to="signup">Sign Up</router-link>
         </md-button>
       </div>
 

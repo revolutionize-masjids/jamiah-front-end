@@ -1,8 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import Home from '@/components/Home'
 import Harness from '@/components/Harness'
+import Signup from '@/components/Signup'
+import Home from '@/components/Home'
 
 Vue.use(Router)
 
@@ -18,6 +19,11 @@ export default new Router({
           path: 'home',
           name: 'Home',
           component: Home
+        },
+        {
+          path: 'signup',
+          name: 'Signup',
+          component: Signup
         }
       ]
     }
