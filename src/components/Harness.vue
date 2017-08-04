@@ -23,7 +23,7 @@
 
       <div class="md-toolbar-container">
         <!-- Take users back to home page -->
-        <router-link to="home" class="md-title">
+        <router-link to="/" class="md-title">
           East Elmhurst Jam-E Muslim Center
         </router-link>
       </div>
