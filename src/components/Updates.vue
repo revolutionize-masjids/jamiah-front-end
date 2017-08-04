@@ -53,7 +53,13 @@
   .md-card
     width: 100%
 
+    .md-card-header
+      padding-left: 0
+      padding-right: 0
+
     .md-card-content
+      padding: 0 !important
+
       .md-board
         text-align: center
 </style>
