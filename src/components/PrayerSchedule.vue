@@ -1,7 +1,7 @@
 <!-- Jama'at congregation times -->
 
 <template>
-  <md-card>
+  <md-card class="prayer-schedule md-accent">
     <md-card-header>
       <div class="md-title">
         Prayer Times

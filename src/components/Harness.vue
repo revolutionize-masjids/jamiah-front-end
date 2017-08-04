@@ -4,7 +4,7 @@
 <template>
   <div>
     <!-- Top navigation bar that contains title and essential buttons and info. Logging in, signing up, account info, open drawer button, etc. -->
-    <md-toolbar class="md-large md-accent">
+    <md-toolbar class="md-large md-primary">
       <div class="md-toolbar-container">
         <md-button class="md-icon-button" @click.native="openNavDrawer()">
           <md-icon>menu</md-icon>

@@ -2,7 +2,7 @@
 
 <template>
   <md-sidenav class="md-left" ref="navDrawer">
-    <md-toolbar class="md-large md-accent">
+    <md-toolbar class="md-large md-primary">
       <div class="md-toolbar-container">
         <h3 class="md-title">Sidenav content</h3>
       </div>
