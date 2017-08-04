@@ -6,4 +6,4 @@
 </template>
 
 <script></script>
-<style></style>
+<style lang="sass"></style>
