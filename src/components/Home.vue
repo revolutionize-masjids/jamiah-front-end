@@ -3,8 +3,17 @@
 <template>
   <div>
     <h1>Home</h1>
+    <PrayerSchedule />
   </div>
 </template>
 
-<script></script>
+<script>
+  import PrayerSchedule from '@/components/PrayerSchedule'
+
+  export default {
+    components: {
+      PrayerSchedule
+    }
+  }
+</script>
 <style></style>
