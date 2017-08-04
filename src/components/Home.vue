@@ -1,18 +1,26 @@
 <!-- Main page of the application. Users are directed here on page load -->
 
 <template>
-  <div>
-    <h1>Home</h1>
-    <PrayerSchedule />
-  </div>
+  <md-layout md-column>
+    <md-layout>
+      <md-layout md-flex="60">
+        <Updates />
+      </md-layout>
+      <md-layout md-flex="40">
+        <PrayerSchedule />
+      </md-layout>
+    </md-layout>
+  </md-layout>
 </template>
 
 <script>
   import PrayerSchedule from '@/components/PrayerSchedule'
+  import Updates from '@/components/Updates'
 
   export default {
     components: {
-      PrayerSchedule
+      PrayerSchedule,
+      Updates
     }
   }
 </script>
