@@ -7,7 +7,7 @@
         <md-image :md-src="MasjidImage" />
       </div>
       <md-toolbar class="md-primary">
-        <span class="md-title">Prayer Times</span>
+        <span class="md-title">Jama'at Times</span>
       </md-toolbar>
     </md-card-header>
     <md-card-content>
