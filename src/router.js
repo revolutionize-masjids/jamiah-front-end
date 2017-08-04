@@ -13,12 +13,12 @@ export default new Router({
   mode: 'history',
   routes: [
     {
-      path: '/',
+      path: '',
       name: 'Harness',
       component: Harness,
       children: [
         {
-          path: 'home',
+          path: '/',
           name: 'Home',
           component: Home
         },
