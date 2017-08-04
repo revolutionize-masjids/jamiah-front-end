@@ -33,6 +33,71 @@
       </md-list>
     </md-toolbar>
 
+    <md-list>
+      <md-list-item>
+          <md-icon>work</md-icon>
+          <span>Services</span>
+
+          <md-list-expand>
+          <md-list>
+              <md-list-item class="md-inset">Marriage Ceremony (Nikkah)</md-list-item>
+              <md-list-item class="md-inset">Funerals</md-list-item>
+              <md-list-item class="md-inset">Volunteering</md-list-item>
+          </md-list>
+          </md-list-expand>
+      </md-list-item>
+
+      <md-list-item>
+          <md-icon>business_center</md-icon>
+          <span>Programs</span>
+
+          <md-list-expand>
+          <md-list>
+              <md-list-item class="md-inset">Saturday School</md-list-item>
+              <md-list-item class="md-inset">Sunday School</md-list-item>
+              <md-list-item class="md-inset">Youth Activities</md-list-item>
+              <md-list-item class="md-inset">Sister's Programs</md-list-item>
+              <md-list-item class="md-inset">Adult Islamic Education</md-list-item>
+          </md-list>
+          </md-list-expand>
+      </md-list-item>
+
+      <md-list-item>
+          <md-icon>event</md-icon>
+          <span>Events</span>
+
+          <md-list-expand>
+          <md-list>
+              <md-list-item class="md-inset">Weekly Jumu'ah</md-list-item>
+              <md-list-item class="md-inset">Eid al-Fitr</md-list-item>
+              <md-list-item class="md-inset">Eid al-Adha</md-list-item>
+              <md-list-item class="md-inset">Lailat al-Mir'aj</md-list-item>
+              <md-list-item class="md-inset">Shaab e-Baraat</md-list-item>
+              <md-list-item class="md-inset">Ramadhan Iftaars</md-list-item>
+              <md-list-item class="md-inset">Taraweeh</md-list-item>
+              <md-list-item class="md-inset">Lailat al-Qadr</md-list-item>
+          </md-list>
+          </md-list-expand>
+      </md-list-item>
+
+      <md-list-item>
+          <md-icon>group</md-icon>
+          <span>Committee Members</span>
+
+          <md-list-expand>
+          <md-list>
+              <md-list-item class="md-inset">Abul Leis</md-list-item>
+              <md-list-item class="md-inset">Kamal Ansar</md-list-item>
+          </md-list>
+          </md-list-expand>
+      </md-list-item>
+
+      <md-list-item>
+          <md-icon>favorite</md-icon>
+          <span>Donate</span>
+      </md-list-item>
+    </md-list>
+
     <div class="phone-viewport">
       <md-list class="custom-list md-double-line">
         <md-list-item>
@@ -108,6 +173,7 @@
 </template>
 
 <script>
+  // import assets (pictures)
   import muslimBrotherImage from '@/assets/muslim-brother.jpg'
   import muslimBrother2Image from '@/assets/muslim-brother-2.jpg'
   import muslimSisterImage from '@/assets/muslim-sister.jpg'
@@ -115,6 +181,7 @@
   export default {
     data: function () {
       return {
+        // add asset reference properties
         muslimBrotherImage,
         muslimBrother2Image,
         muslimSisterImage
