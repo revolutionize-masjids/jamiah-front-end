@@ -18,7 +18,7 @@ const base = {
   },
   accent: {
     color: 'teal',
-    hue: 800
+    hue: 'A700'
   },
   warn: 'red'
 }
