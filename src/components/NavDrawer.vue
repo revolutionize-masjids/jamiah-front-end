@@ -33,7 +33,77 @@
       </md-list>
     </md-toolbar>
 
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi cupiditate esse necessitatibus beatae nobis, deserunt ut est fugit, tempora deleniti, eligendi commodi doloribus. Nemo, assumenda possimus, impedit inventore perferendis iusto!</p>
+    <div class="phone-viewport">
+      <md-list class="custom-list md-double-line">
+        <md-list-item>
+          <md-avatar>
+            <img src="https://placeimg.com/40/40/people/1" alt="People">
+          </md-avatar>
+
+          <div class="md-list-text-container">
+            <span>Kamal Ansar</span>
+            <p>Running late for adhan, tell someone else to do it</p>
+          </div>
+
+          <md-button class="md-icon-button md-list-action">
+            <md-icon class="md-primary">chat_bubble</md-icon>
+          </md-button>
+
+          <md-divider class="md-inset"></md-divider>
+        </md-list-item>
+
+        <md-list-item>
+          <md-avatar>
+            <img src="https://placeimg.com/40/40/people/6" alt="People">
+          </md-avatar>
+
+          <div class="md-list-text-container">
+            <span>me, Jafar, Mamun</span>
+            <p>Who is going to be hafiz for taraweeh?</p>
+          </div>
+
+          <md-button class="md-icon-button md-list-action">
+            <md-icon>chat_bubble</md-icon>
+          </md-button>
+
+          <md-divider class="md-inset"></md-divider>
+        </md-list-item>
+
+        <md-list-item>
+          <md-avatar>
+            <img src="https://placeimg.com/40/40/people/5" alt="People">
+          </md-avatar>
+
+          <div class="md-list-text-container">
+            <span>Afsor Choudhury</span>
+            <p>When is 'Isha jama'at tomorrow?...</p>
+          </div>
+
+          <md-button class="md-icon-button md-list-action">
+            <md-icon>chat_bubble</md-icon>
+          </md-button>
+
+          <md-divider class="md-inset"></md-divider>
+        </md-list-item>
+
+        <md-list-item>
+          <md-avatar>
+            <img src="https://placeimg.com/40/40/people/8" alt="People">
+          </md-avatar>
+
+          <div class="md-list-text-container">
+            <span>Farshed Adib</span>
+            <p>When is 'Eid jama'at, Sunday or Saturday?</p>
+          </div>
+
+          <md-button class="md-icon-button md-list-action">
+            <md-icon>chat_bubble</md-icon>
+          </md-button>
+
+          <md-divider class="md-inset"></md-divider>
+        </md-list-item>
+      </md-list>
+    </div>
   </md-sidenav>
 </template>
 
