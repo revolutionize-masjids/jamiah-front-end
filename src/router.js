@@ -1,3 +1,5 @@
+// Define paths of every page component, etc.
+
 import Vue from 'vue'
 import Router from 'vue-router'
 

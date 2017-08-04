@@ -1,3 +1,5 @@
+// HTTP related things
+
 import Vue from 'vue'
 import VueResource from 'vue-resource'
 import VueAuthenticate from 'vue-authenticate'

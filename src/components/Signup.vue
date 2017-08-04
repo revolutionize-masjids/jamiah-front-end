@@ -1,5 +1,8 @@
+<!-- How users will be able to sign up to the app. They can use social media accounts like Facebook and possibly make their own accounts using custom email and password. -->
+
 <template>
   <div>
+    <!-- Signup with Facebook -->
     <md-button @click.native="authenticate('facebook')">
       Signup with Facebook
     </md-button>
@@ -22,3 +25,5 @@
     }
   }
 </script>
+
+<style></style>
