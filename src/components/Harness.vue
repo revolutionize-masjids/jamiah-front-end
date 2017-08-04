@@ -13,6 +13,22 @@
         <span style="flex: 1;"></span>
 
         <md-button>
+          Blog
+        </md-button>
+
+        <md-button>
+          <md-icon>favorite</md-icon>
+          <span>Donate</span>
+          <md-tooltip>Give Sadaqah</md-tooltip>
+        </md-button>
+
+        <md-button>
+          <md-icon>place</md-icon>
+          <span>Address</span>
+          <md-tooltip>Masjid Location</md-tooltip>
+        </md-button>
+
+        <md-button>
           Login
         </md-button>
 
