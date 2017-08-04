@@ -6,7 +6,7 @@
     <!-- Top navigation bar that contains title and essential buttons and info. Logging in, signing up, account info, open drawer button, etc. -->
     <md-toolbar class="md-large">
       <div class="md-toolbar-container">
-        <md-button class="md-icon-button">
+        <md-button class="md-icon-button" @click.native="openNavDrawer()">
           <md-icon>menu</md-icon>
         </md-button>
 
@@ -29,11 +29,27 @@
       </div>
     </md-toolbar>
 
+    <NavDrawer ref="navDrawer" />
+
     <!-- All components will be rendered here (such as home) -->
     <router-view></router-view>
   </div>
 </template>
 
-<script></script>
+<script>
+  import NavDrawer from '@/components/NavDrawer'
+
+  export default {
+    components: {
+      NavDrawer
+    },
+    methods: {
+      // handle opening the navigation drawer on the left
+      openNavDrawer () {
+        this.$refs.navDrawer.open()
+      }
+    }
+  }
+</script>
 
 <style></style>
