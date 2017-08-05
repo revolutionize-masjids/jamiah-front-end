@@ -11,6 +11,12 @@
 
       <span style="flex: 1;"></span>
 
+      <!-- Button that directs user to the "Learn about Islam" page -->
+      <md-button>
+        <span>Learn Islam</span>
+        <md-tooltip>Learn about Islam!</md-tooltip>
+      </md-button>
+
       <!-- Button that directs user to the blog page -->
       <md-button>
         <span>Blog</span>
