@@ -5,12 +5,12 @@
 
     <!-- Content Above Prayer Times -->
     <md-card-header>
-      <div class="masjid-image">
-        <md-image :md-src="MasjidImage" />
-      </div>
       <md-toolbar class="md-primary">
         <span class="md-title">Prayer Times</span>
       </md-toolbar>
+      <div class="masjid-image">
+        <md-image :md-src="MasjidImage" />
+      </div>
     </md-card-header>
 
     <!-- Table displaying Jama'at Times -->
