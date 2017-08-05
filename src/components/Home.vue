@@ -1,15 +1,15 @@
 <!-- Main page of the application. Users are directed here on page load -->
 
 <template>
-  <md-layout md-column>
-    <md-layout>
+  <md-layout class="home" md-column>
+    <md-layout class="content" md-gutter="40">
       <!-- News & Updates -->
-      <md-layout md-flex="70">
+      <md-layout class="updates-container" md-flex="60">
         <Updates />
       </md-layout>
 
       <!-- Prayer Times -->
-      <md-layout md-flex="30">
+      <md-layout md-flex="40">
         <PrayerSchedule />
       </md-layout>
     </md-layout>
@@ -28,4 +28,10 @@
   }
 </script>
 
-<style lang="sass"></style>
+<style lang="sass">
+  @import '../styles/variables.sass'
+
+  .home
+    .content
+      margin: $bs * 5 $bs * 2
+</style>
