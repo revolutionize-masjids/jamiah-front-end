@@ -19,7 +19,6 @@
         <!-- Column labels -->
         <md-table-header>
           <md-table-row>
-            <md-table-head></md-table-head>
             <md-table-head>Salah</md-table-head>
             <md-table-head>Adhan</md-table-head>
             <md-table-head>Iqaamah</md-table-head>
@@ -31,11 +30,11 @@
           <!-- Fajr -->
           <md-table-row>
             <md-table-cell>
+              <span>Fajr</span>
               <md-avatar>
                 <md-image :md-src="SunriseImage" alt="People" />
               </md-avatar>
             </md-table-cell>
-            <md-table-cell>Fajr</md-table-cell>
             <md-table-cell>5:15 AM</md-table-cell>
             <md-table-cell>5:30 AM</md-table-cell>
           </md-table-row>
@@ -43,23 +42,24 @@
           <!-- Dhuhr -->
           <md-table-row>
             <md-table-cell>
+              <span>Dhuhr</span>
               <md-avatar>
                 <md-image :md-src="MidDayImage" alt="People" />
               </md-avatar>
             </md-table-cell>
-            <md-table-cell>Dhuhr</md-table-cell>
             <md-table-cell>1:15 PM</md-table-cell>
             <md-table-cell>1:30 PM</md-table-cell>
           </md-table-row>
 
           <!-- 'Asr -->
           <md-table-row>
+
             <md-table-cell>
+              <span>'Asr</span>
               <md-avatar>
                 <md-image :md-src="AfternoonImage" alt="People" />
               </md-avatar>
             </md-table-cell>
-            <md-table-cell>'Asr</md-table-cell>
             <md-table-cell>5:15 PM</md-table-cell>
             <md-table-cell>5:30 PM</md-table-cell>
           </md-table-row>
@@ -67,11 +67,11 @@
           <!-- Maghrib -->
           <md-table-row>
             <md-table-cell>
+              <span>Maghrib</span>
               <md-avatar>
                 <md-image :md-src="SunsetImage" alt="People" />
               </md-avatar>
             </md-table-cell>
-            <md-table-cell>Maghrib</md-table-cell>
             <md-table-cell>8:27 PM</md-table-cell>
             <md-table-cell>8:27 PM</md-table-cell>
           </md-table-row>
@@ -79,11 +79,11 @@
           <!-- Isha' -->
           <md-table-row>
             <md-table-cell>
+              <span>'Isha</span>
               <md-avatar>
                 <md-image :md-src="NightImage" alt="People" />
               </md-avatar>
             </md-table-cell>
-            <md-table-cell>'Isha</md-table-cell>
             <md-table-cell>10:15 PM</md-table-cell>
             <md-table-cell>10:30 PM</md-table-cell>
           </md-table-row>
@@ -129,4 +129,12 @@
     .md-card-content
       .md-table
         background-color: white
+
+        .md-table-body
+          .md-table-row
+            .md-table-cell
+              .md-table-cell-container
+              .md-avatar
+                margin: 0 !important
+
 </style>
