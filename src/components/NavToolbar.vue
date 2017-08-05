@@ -20,12 +20,6 @@
       </md-button>
 
       <md-button>
-        <md-icon>place</md-icon>
-        <span>Address</span>
-        <md-tooltip>Masjid Location</md-tooltip>
-      </md-button>
-
-      <md-button>
         Login
       </md-button>
 
@@ -39,6 +33,16 @@
       <router-link to="/" class="md-title">
         East Elmhurst Jam-E Muslim Center
       </router-link>
+
+      <span style="flex: 1"></span>
+
+      <md-icon>place</md-icon>
+      <span>9501 24th Ave, East Elmhurst, NY 11369</span>
+
+      <span style="flex: .25"></span>
+
+      <md-icon>phone</md-icon>
+      <span>(718) 779-2771</span>
     </div>
   </md-toolbar>
 </template>
