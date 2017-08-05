@@ -17,16 +17,16 @@
         <md-tooltip>Learn about Islam!</md-tooltip>
       </md-button>
 
-      <!-- Button that directs user to the blog page -->
-      <md-button>
-        <span>Blog</span>
-        <md-tooltip>Check out our blog!</md-tooltip>
-      </md-button>
-
       <!-- Donate button that allows user to pay via PayPal or MOHIN (or some other payment tool) -->
       <md-button>
         <span>Donate</span>
         <md-tooltip>Give Sadaqah</md-tooltip>
+      </md-button>
+
+      <!-- Button that gives user contact information -->
+      <md-button>
+        <span>Contact</span>
+        <md-tooltip>Reach out to us!</md-tooltip>
       </md-button>
 
       <!-- Login button that opens a modal which you can use to login via social media or custom account -->
