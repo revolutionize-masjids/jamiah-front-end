@@ -17,13 +17,39 @@
         <md-tooltip>Learn about Islam!</md-tooltip>
       </md-button>
 
-      <!-- Donate button that allows user to pay via PayPal or MOHIN (or some other payment tool) -->
+      <!-- List of services -->
+      <md-menu md-size="4">
+        <md-button md-menu-trigger>Services</md-button>
+
+        <md-menu-content>
+          <md-menu-item>
+            <div class="md-list-text-container">
+              <span>Marriage Ceremony</span>
+              <span>Nikkah</span>
+            </div>
+          </md-menu-item>
+          <md-menu-item>
+            <div class="md-list-text-container">
+              <span>Funerals</span>
+              <span>Janazah</span>
+            </div>
+          </md-menu-item>
+          <md-menu-item>Volunteering</md-menu-item>
+          <md-menu-item>Saturday School</md-menu-item>
+          <md-menu-item>Sunday School</md-menu-item>
+          <md-menu-item>Youth Activities</md-menu-item>
+          <md-menu-item>Sister's Programs</md-menu-item>
+          <md-menu-item>Adult Islamic Education</md-menu-item>
+        </md-menu-content>
+      </md-menu>
+
+      <!-- Donate via PayPal or MOHIN (or some other payment tool) -->
       <md-button>
         <span>Donate</span>
         <md-tooltip>Give Sadaqah</md-tooltip>
       </md-button>
 
-      <!-- Button that gives user contact information -->
+      <!-- Get contact information -->
       <md-button>
         <span>Contact</span>
         <md-tooltip>Reach out to us!</md-tooltip>
@@ -79,6 +105,12 @@
 
   .nav-toolbar
     .text-content
-      // align with action buttons
+      // align text content with action buttons
       padding-right: $bs * 3
+
+    .md-menu
+      .md-menu-content
+        .md-menu-item
+          span
+            color: red !important
 </style>
