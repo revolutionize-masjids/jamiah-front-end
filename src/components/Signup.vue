@@ -12,6 +12,7 @@
 <script>
   export default {
     methods: {
+      // Use the Vue-Authenticate package to authenticate account via social media
       async authenticate (provider) {
         try {
           await this.$auth.authenticate(provider)
