@@ -4,12 +4,17 @@
   <md-layout class="home" md-column>
     <md-layout class="content" md-gutter="40">
       <!-- News & Updates -->
-      <md-layout class="updates-container" md-flex="60">
-        <Updates />
+      <md-layout class="left-column" md-flex="60" md-column>
+        <md-layout md-flex="70">
+          <Updates />
+        </md-layout>
+        <md-layout md-flex="30">
+          <PathToKnowledge />
+        </md-layout>
       </md-layout>
 
       <!-- Prayer Times -->
-      <md-layout md-flex="40">
+      <md-layout class="right-column" md-flex="40">
         <PrayerSchedule />
       </md-layout>
     </md-layout>
@@ -19,11 +24,13 @@
 <script>
   import PrayerSchedule from '@/components/PrayerSchedule'
   import Updates from '@/components/Updates'
+  import PathToKnowledge from '@/components/PathToKnowledge'
 
   export default {
     components: {
       PrayerSchedule,
-      Updates
+      Updates,
+      PathToKnowledge
     }
   }
 </script>
@@ -34,4 +41,7 @@
   .home
     .content
       margin: $bs * 5 $bs * 2
+
+      .left-column, .right-column
+        height: 100%
 </style>
