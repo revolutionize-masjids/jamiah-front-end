@@ -7,6 +7,9 @@ import VueMaterial from 'vue-material'
 // include the view material styles
 import 'vue-material/dist/vue-material.css'
 
+// import global styles
+import '@/styles/application.sass'
+
 // Use the whole Vue Material library
 Vue.use(VueMaterial)
 
