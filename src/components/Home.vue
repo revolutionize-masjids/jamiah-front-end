@@ -40,7 +40,7 @@
 
   .home
     .content
-      margin: $bs * 5 $bs * 2
+      margin: $bs * 5 $bs * 2 !important
 
       .left-column, .right-column
         height: 100%
