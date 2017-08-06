@@ -41,6 +41,8 @@
           <md-menu-item>Sister's Programs</md-menu-item>
           <md-menu-item>Adult Islamic Education</md-menu-item>
         </md-menu-content>
+
+        <md-tooltip>We have many programs & services!</md-tooltip>
       </md-menu>
 
       <!-- Donate via PayPal or MOHIN (or some other payment tool) -->
@@ -50,10 +52,39 @@
       </md-button>
 
       <!-- Get contact information -->
-      <md-button>
-        <span>Contact</span>
+      <md-menu md-size="6">
+        <md-button md-menu-trigger>Contact Us</md-button>
+
+        <md-menu-content>
+          <md-menu-item>
+            <div class="md-list-text-container">
+              <span>9501 24th Ave, East Elmhurst, NY 11369</span>
+              <span>Masjid Address</span>
+            </div>
+          </md-menu-item>
+          <md-menu-item>
+            <div class="md-list-text-container">
+              <span>(718) 779-2771</span>
+              <span>Masjid Phone Number</span>
+            </div>
+          </md-menu-item>
+          <md-menu-item>
+            <div class="md-list-text-container">
+              <span>contact@eejmc.org</span>
+              <span>Masjid Email</span>
+            </div>
+          </md-menu-item>
+          <md-divider></md-divider>
+          <md-menu-item>
+            <div class="md-list-text-container">
+              <span>syednashikaman@gmail.com</span>
+              <span>Technical Support</span>
+            </div>
+          </md-menu-item>
+        </md-menu-content>
+
         <md-tooltip>Reach out to us!</md-tooltip>
-      </md-button>
+      </md-menu>
 
       <!-- Login button that opens a modal which you can use to login via social media or custom account -->
       <md-button>
