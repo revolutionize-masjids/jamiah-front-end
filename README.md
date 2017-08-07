@@ -37,37 +37,51 @@ For detailed explanation on how things work, checkout the [Vue.js official docs]
 
 ### How do I Run this on my Machine?
 
-After installing `NPM` and `Node.js`, run these terminal commands:
+### Pre-requisites
+
+Make sure you have Node and Yarn installed
+
+```bash
+  # MAC OSX (using Homebrew)
+  brew install node
+  brew install yarn
+
+  # Windows (using Chocolatey)
+  choco install node
+  choco install yarn
+```
+
+### Run the dev server!
 
 ```bash
 # install all required libraries
-npm install
+yarn install
 
 # start the dev server on http://localhost:6236
-npm start
+yarn start
 ```
 
 ### Build Setup
 
 ```bash
 # install dependencies
-npm install
+yarn install
 
 # serve with hot reload at localhost:6236
-npm run dev
+yarn run dev
 
 # build for production with minification
-npm run build
+yarn run build
 
 # build for production and view the bundle analyzer report
-npm run build --report
+yarn run build --report
 
 # run unit tests
-npm run unit
+yarn run unit
 
 # run e2e tests
-npm run e2e
+yarn run e2e
 
 # run all tests
-npm test
+yarn test
 ```
