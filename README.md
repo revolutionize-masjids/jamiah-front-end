@@ -51,6 +51,13 @@ Make sure you have Node and Yarn installed
   choco install yarn
 ```
 
+### Clone the repo
+
+```bash
+  git clone https://github.com/revolutionize-masjids/eejmc-front-end.git
+  cd eejmc-front-end
+```
+
 ### Run the dev server!
 
 ```bash
