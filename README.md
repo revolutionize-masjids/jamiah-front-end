@@ -58,10 +58,12 @@ Make sure you have Node and Yarn installed
 yarn install
 
 # start the dev server on http://localhost:6236
-yarn start
+yarn run dev
 ```
 
 ### Build Setup
+
+extra commands you can run if you want to do unit tests or build for production
 
 ```bash
 # install dependencies
