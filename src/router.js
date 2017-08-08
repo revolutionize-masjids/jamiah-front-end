@@ -1,14 +1,18 @@
-// Define paths of every page component, etc.
+//
+// Define URL paths of every page
+//
 
 import Vue from 'vue'
 import Router from 'vue-router'
 
+// import all the pages
 import Harness from '@/components/Harness'
 import Signup from '@/components/Signup'
 import Home from '@/components/Home'
 
 Vue.use(Router)
 
+// define routes
 export default new Router({
   mode: 'history',
   routes: [

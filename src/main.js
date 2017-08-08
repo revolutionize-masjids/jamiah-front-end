@@ -12,6 +12,7 @@ import '@/lib/resource'
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
+// create the main Vue instance to run our root component in
 new Vue({
   el: '#app',
   router,
