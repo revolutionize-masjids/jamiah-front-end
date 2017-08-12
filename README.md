@@ -26,12 +26,16 @@ Users will be able to start forum threads and discussions regarding Islam or com
 
 You can send Pull Requests immediately and you can contact Syed Aman (syednashikaman@gmail.com) to get started.
 
-### What do I Learn to be able to Contribute?
+### Stack
 
-- JavaScript
-- HTML
-- CSS
+You would need to learn some of these technologies to be able to contribute
+
+- JavaScript ES8
+- HTML 5
+- SASS (CSS Pre-Processor)
 - Vue.js (front-end framework)
+- Apollo/GraphQL
+- Vue Material
 
 For detailed explanation on how things work, checkout the [Vue.js official docs](https://vuejs.org), the [Vue Materials Docs](http://vuematerial.io/), and the [Mozilla Developer Network](https://mdn.org).
 
@@ -40,6 +44,10 @@ For detailed explanation on how things work, checkout the [Vue.js official docs]
 After installing `NPM` and `Node.js`, run these terminal commands:
 
 ```bash
+# clone the repository
+git clone https://github.com/revolutionize-masjids/eejmc-front-end.git
+cd eejmc-front-end
+
 # install all required libraries
 npm install
 
