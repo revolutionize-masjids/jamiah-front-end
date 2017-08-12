@@ -1,5 +1,5 @@
 <!-- "Outer shell" of the app that contains toolbar and bottom bar etc. -->
-<!-- Anything that should be displayed on EVERY page -->
+<!-- Contains anything that should be displayed in EVERY page -->
 
 <template>
   <div>

@@ -13,7 +13,7 @@ import '@/styles/application.sass'
 // Use the whole Vue Material library
 Vue.use(VueMaterial)
 
-// define theme
+// define the color scheme (theme) for the app
 const base = {
   primary: {
     color: 'teal',
@@ -26,4 +26,5 @@ const base = {
   warn: 'red'
 }
 
+// register the defined themes
 Vue.material.registerTheme('default', base)
