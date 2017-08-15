@@ -3,9 +3,9 @@
 <template>
   <div>
     <!-- Signup with Facebook -->
-    <md-button @click.native="authenticate('facebook')">
+    <!-- <md-button @click.native="authenticate('facebook')">
       Signup with Facebook
-    </md-button>
+    </md-button> -->
   </div>
 </template>
 
