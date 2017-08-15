@@ -6,11 +6,29 @@
     <!-- <md-button @click.native="authenticate('facebook')">
       Signup with Facebook
     </md-button> -->
+    <md-subheader>Start engaging with your own community!</md-subheader>
+    <form novalidate @submit.stop.prevent="submit">
+      <md-input-container>
+        <label>Username</label>
+        <md-input v-model="username"></md-input>
+      </md-input-container>
+
+      <md-input-container md-has-password>
+        <label>Password</label>
+        <md-input type="password" v-model="password"></md-input>
+      </md-input-container>
+    </form>
   </div>
 </template>
 
 <script>
   export default {
+    data: function () {
+      return ({
+        username: null,
+        password: null
+      })
+    },
     methods: {
       // Use the Vue-Authenticate package to authenticate account via social media
       async authenticate (provider) {
