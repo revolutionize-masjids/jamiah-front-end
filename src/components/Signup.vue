@@ -17,8 +17,8 @@
         <md-card-content>
           <form novalidate @submit.stop.prevent="submit">
             <md-input-container>
-              <label>Username</label>
-              <md-input v-model="username"></md-input>
+              <label>Email</label>
+              <md-input v-model="email" type="email"></md-input>
             </md-input-container>
 
             <md-input-container md-has-password>
@@ -41,7 +41,7 @@
   export default {
     data: function () {
       return ({
-        username: null,
+        email: null,
         password: null
       })
     },
