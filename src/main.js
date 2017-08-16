@@ -8,6 +8,7 @@ import App from '@/App'
 import router from '@/router'
 import '@/lib/theme'
 import '@/lib/resource'
+import '@/lib/apollo'
 
 Vue.config.productionTip = false
 
