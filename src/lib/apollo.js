@@ -1,12 +1,12 @@
 //
 // Use Apollo client to interface with GraphQL API
+// Create an provider that holds Apollo client instances
 //
 
 import Vue from 'vue'
 import { ApolloClient, createBatchingNetworkInterface } from 'apollo-client'
 import VueApollo from 'vue-apollo'
 
-import App from '@/App'
 import config from '@/config'
 
 // Install plugin which enables using ApolloClient with Vue
@@ -26,9 +26,4 @@ const apolloProvider = new VueApollo({
   defaultClient: apolloClient
 })
 
-/* eslint-disable no-new */
-new Vue({
-  el: '#app',
-  apolloProvider,
-  render: h => h(App)
-})
+export default apolloProvider

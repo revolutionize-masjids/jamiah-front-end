@@ -31,7 +31,13 @@
       PrayerSchedule,
       Updates,
       PathToKnowledge
-    }
+    },
+    data: function () {
+      return ({
+        // properties
+      })
+    },
+    methods: {}
   }
 </script>
 
