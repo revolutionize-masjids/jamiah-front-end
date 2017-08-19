@@ -18,12 +18,12 @@
           <form novalidate @submit.stop.prevent="submit">
             <md-input-container>
               <label>Email</label>
-              <md-input v-model="email" type="email"></md-input>
+              <md-input v-model="email" type="email" required></md-input>
             </md-input-container>
 
             <md-input-container md-has-password>
               <label>Password</label>
-              <md-input type="password" v-model="password"></md-input>
+              <md-input type="password" v-model="password" required></md-input>
             </md-input-container>
           </form>
         </md-card-content>
