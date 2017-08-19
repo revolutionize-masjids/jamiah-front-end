@@ -16,8 +16,6 @@
 </template>
 
 <script>
-  import gql from 'graphql-tag'
-
   import NavDrawer from '@/components/NavDrawer'
   import NavToolbar from '@/components/NavToolbar'
 
@@ -25,19 +23,6 @@
     components: {
       NavDrawer,
       NavToolbar
-    },
-    // GraphQL requests
-    apollo: {
-      // make query to GraphQL API to fetch the first name of all created users
-      allUsers: {
-        query: gql`
-          query {
-            allUsers {
-              firstName
-            }
-          }
-        `
-      }
     },
     // component methods
     methods: {
