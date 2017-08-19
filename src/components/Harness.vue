@@ -16,6 +16,8 @@
 </template>
 
 <script>
+  import gql from 'graphql-tag'
+
   import NavDrawer from '@/components/NavDrawer'
   import NavToolbar from '@/components/NavToolbar'
 
@@ -23,6 +25,29 @@
     components: {
       NavDrawer,
       NavToolbar
+    },
+    apollo: {
+      // make query to GraphQL API to fetch the first name of all created users
+      allUsers: {
+        query: gql`
+          {
+            query allUsers {
+              firstName
+            }
+          }
+        `
+      },
+      // make query to GraphQL API to fetch a user with specified first name
+      user: {
+        query: gql`
+          {
+            query user(firstName: "Syed") {
+              firstName
+              lastName
+            }
+          }
+        `
+      }
     },
     methods: {
       // handle opening the navigation drawer on the left
