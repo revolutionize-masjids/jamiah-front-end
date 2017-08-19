@@ -29,7 +29,8 @@
         </md-card-content>
         <md-card-actions>
           <md-layout md-align="end">
-            <md-button>Sign Up</md-button>
+            <!-- Create a user when user clicks Sign Up button -->
+            <md-button @click.native="createUser()">Sign Up</md-button>
           </md-layout>
         </md-card-actions>
       </md-card>
@@ -38,6 +39,8 @@
 </template>
 
 <script>
+  import gql from 'graphql-tag'
+
   export default {
     data: function () {
       return ({
@@ -45,7 +48,30 @@
         password: null
       })
     },
+    // define queries
+    apollo: {},
     methods: {
+      // create a new user using the enter email and password
+      createUser () {
+        // send a mutation to the api
+        this.$apollo.mutate({
+          // define the mutation using GraphQL syntax
+          mutation: gql`
+            mutation CreateAUser($userEmail: String!, $userPassword: String!) {
+              createUser(email: $userEmail, password: $userPassword) {
+                _id
+                email
+                password
+              }
+            }
+          `,
+          // define the variables to be used as parameters for the mutation
+          variables: {
+            userEmail: this.email,
+            userPassword: this.password
+          }
+        })
+      }
       // Use the Vue-Authenticate package to authenticate account via social media
       // async authenticate (provider) {
       //   try {
