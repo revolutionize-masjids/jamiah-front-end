@@ -47,16 +47,16 @@
     },
     methods: {
       // Use the Vue-Authenticate package to authenticate account via social media
-      async authenticate (provider) {
-        try {
-          await this.$auth.authenticate(provider)
-          // Execute application logic after successful social authentication
-
-          console.log('successfully authenticated')
-        } catch (error) {
-          console.log('error authenticating', error)
-        }
-      }
+      // async authenticate (provider) {
+      //   try {
+      //     await this.$auth.authenticate(provider)
+      //     // Execute application logic after successful social authentication
+      //
+      //     console.log('successfully authenticated')
+      //   } catch (error) {
+      //     console.log('error authenticating', error)
+      //   }
+      // }
     }
   }
 </script>
