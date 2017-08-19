@@ -8,31 +8,33 @@
     </md-button> -->
     <md-layout md-align="center" md-vertical-align="center">
       <md-card>
-        <md-card-header>
-          <md-card-header-text>
-            <div class="md-title">Sign Up</div>
-            <div class="subhead">Start engaging with your own community!</div>
-          </md-card-header-text>
-        </md-card-header>
-        <md-card-content>
-          <form novalidate @submit.stop.prevent="submit">
-            <md-input-container>
-              <label>Email</label>
-              <md-input v-model="email" type="email" required></md-input>
-            </md-input-container>
+        <form @submit.stop.prevent="submit">
+          <md-card-header>
+            <md-card-header-text>
+              <div class="md-title">Sign Up</div>
+              <div class="subhead">Start engaging with your own community!</div>
+            </md-card-header-text>
+          </md-card-header>
+          <md-card-content>
+              <md-input-container>
+                <label>Email</label>
+                <md-input v-model="email" type="email" required></md-input>
+              </md-input-container>
 
-            <md-input-container md-has-password>
-              <label>Password</label>
-              <md-input type="password" v-model="password" required></md-input>
-            </md-input-container>
-          </form>
-        </md-card-content>
-        <md-card-actions>
-          <md-layout md-align="end">
-            <!-- Create a user when user clicks Sign Up button -->
-            <md-button @click.native="createUser()">Sign Up</md-button>
-          </md-layout>
-        </md-card-actions>
+              <md-input-container md-has-password>
+                <label>Password</label>
+                <md-input type="password" v-model="password" required></md-input>
+              </md-input-container>
+          </md-card-content>
+          <md-card-actions>
+            <md-layout md-align="end">
+              <!-- Create a user when user clicks Sign Up button -->
+              <md-button type="submit" @click.native="createUser()">
+                Sign Up
+              </md-button>
+            </md-layout>
+          </md-card-actions>
+        </form>
       </md-card>
     </md-layout>
   </md-layout>
