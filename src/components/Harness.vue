@@ -26,29 +26,20 @@
       NavDrawer,
       NavToolbar
     },
+    // GraphQL requests
     apollo: {
       // make query to GraphQL API to fetch the first name of all created users
       allUsers: {
         query: gql`
-          {
-            query allUsers {
+          query {
+            allUsers {
               firstName
-            }
-          }
-        `
-      },
-      // make query to GraphQL API to fetch a user with specified first name
-      user: {
-        query: gql`
-          {
-            query user(firstName: "Syed") {
-              firstName
-              lastName
             }
           }
         `
       }
     },
+    // component methods
     methods: {
       // handle opening the navigation drawer on the left
       openNavDrawer () {
