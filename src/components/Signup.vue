@@ -8,7 +8,7 @@
     </md-button> -->
     <md-layout md-align="center" md-vertical-align="center">
       <md-card>
-        <form @submit.stop.prevent="submit">
+        <form @submit.stop.prevent="createUser">
           <md-card-header>
             <md-card-header-text>
               <div class="md-title">Sign Up</div>
