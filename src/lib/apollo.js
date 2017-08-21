@@ -16,7 +16,7 @@ Vue.use(VueApollo)
 const apolloClient = new ApolloClient({
   networkInterface: createBatchingNetworkInterface({
     // GraphQL API url
-    uri: config.api
+    uri: config.api + '/graphql'
   }),
   connectToDevTools: true
 })
