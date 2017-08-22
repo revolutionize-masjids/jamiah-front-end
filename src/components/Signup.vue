@@ -23,13 +23,18 @@
 
               <md-input-container md-has-password>
                 <label>Password</label>
-                <md-input type="password" v-model="password" required></md-input>
+                <md-input type="password" v-model="password" required />
+              </md-input-container>
+              <md-input-container md-has-password>
+                <label>Re-enter Password</label>
+                <md-input type="password" v-model="confirmPassword" required />
               </md-input-container>
           </md-card-content>
+
           <md-card-actions>
             <md-layout md-align="end">
-              <!-- Create a user when user clicks Sign Up button -->
-              <md-button type="submit" @click.native="createUser()">
+              <!-- Create a user when user clicks Sign Up button. Disable button if password isn't confirmed -->
+              <md-button type="submit" @click.native="createUser()" :disabled="!isPasswordValid">
                 Sign Up
               </md-button>
             </md-layout>
@@ -47,7 +52,8 @@
     data: function () {
       return ({
         email: null,
-        password: null
+        password: null,
+        confirmPassword: null
       })
     },
     // define queries
@@ -85,6 +91,12 @@
       //     console.log('error authenticating', error)
       //   }
       // }
+    },
+    computed: {
+      // see if password is confirmed and valid
+      isPasswordValid: function () {
+        return this.password !== null && this.password === this.confirmPassword
+      }
     }
   }
 </script>
