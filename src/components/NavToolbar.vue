@@ -62,7 +62,7 @@
 
       <!-- Get contact information -->
       <md-menu md-size="6">
-        <md-button md-menu-trigger>Contact Us</md-button>
+        <md-button md-menu-trigger>Contact</md-button>
 
         <md-menu-content>
           <md-menu-item>
