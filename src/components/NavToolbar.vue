@@ -11,12 +11,6 @@
 
       <span style="flex: 1;"></span>
 
-      <!-- Button that directs user to the "Learn about Islam" page -->
-      <md-button>
-        <span>Learn Islam</span>
-        <md-tooltip>Learn about Islam!</md-tooltip>
-      </md-button>
-
       <!-- List of services -->
       <md-menu md-size="4">
         <md-button md-menu-trigger>Services</md-button>
@@ -53,6 +47,12 @@
 
         <md-tooltip>We have many programs & services!</md-tooltip>
       </md-menu>
+
+      <!-- Button that directs user to the "Learn about Islam" page -->
+      <md-button>
+        <span>Learn Islam</span>
+        <md-tooltip>Learn about Islam!</md-tooltip>
+      </md-button>
 
       <!-- Donate via PayPal or MOHIN (or some other payment tool) -->
       <md-button>
