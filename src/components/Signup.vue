@@ -17,10 +17,17 @@
 
           <md-card-content>
               <md-input-container>
-                <label>Email</label>
-                <md-input v-model="email" type="email" required></md-input>
+                <label>First Name</label>
+                <md-input v-model="firstName" type="text" required />
               </md-input-container>
-
+              <md-input-container>
+                <label>Last Name</label>
+                <md-input v-model="lastName" type="text" required />
+              </md-input-container>
+              <md-input-container>
+                <label>Email</label>
+                <md-input v-model="email" type="email" required />
+              </md-input-container>
               <md-input-container md-has-password>
                 <label>Password</label>
                 <md-input type="password" v-model="password" required />
@@ -51,6 +58,8 @@
   export default {
     data: function () {
       return ({
+        firstName: null,
+        lastName: null,
         email: null,
         password: null,
         confirmPassword: null
