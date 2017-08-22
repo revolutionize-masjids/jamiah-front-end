@@ -7,19 +7,23 @@
         <div class="md-title">Create Account</div>
 
         <!-- Main content -->
-        <md-layout>
+        <md-layout md-gutter="40" main-content>
           <!-- Manual signup section -->
           <md-layout md-column manual-signup>
-            <md-layout>
-              <md-input-container>
-                <label>First Name</label>
-                <md-input v-model="firstName" type="text" required />
-              </md-input-container>
+            <md-layout md-gutter="24">
+              <md-layout md-flex="50">
+                <md-input-container>
+                  <label>First Name</label>
+                  <md-input v-model="firstName" type="text" required />
+                </md-input-container>
+              </md-layout>
 
-              <md-input-container>
-                <label>Last Name</label>
-                <md-input v-model="lastName" type="text" required />
-              </md-input-container>
+              <md-layout md-flex="50">
+                <md-input-container>
+                  <label>Last Name</label>
+                  <md-input v-model="lastName" type="text" required />
+                </md-input-container>
+              </md-layout>
             </md-layout>
 
             <md-input-container>
@@ -27,15 +31,28 @@
               <md-input v-model="email" type="email" required />
             </md-input-container>
 
-            <md-input-container md-has-password>
-              <label>Password</label>
-              <md-input type="password" v-model="password" required />
-            </md-input-container>
+            <md-layout md-gutter="24">
+              <md-layout md-flex="50">
+                <md-input-container md-has-password>
+                  <label>Password</label>
+                  <md-input type="password" v-model="password" required />
+                </md-input-container>
+                <md-input-container md-has-password>
+                  <label>Re-enter Password</label>
+                  <md-input type="password" v-model="confirmPassword" required />
+                </md-input-container>
+              </md-layout>
+              <md-layout md-flex="50">
+                <span>Passwords must be at least 6 alphanumerical characters and contain one number and symbol.</span>
+              </md-layout>
+            </md-layout>
 
-            <md-input-container md-has-password>
-              <label>Re-enter Password</label>
-              <md-input type="password" v-model="confirmPassword" required />
-            </md-input-container>
+            <md-layout md-align="center">
+              <!-- Create a user when user clicks Sign Up button. Disable button if password isn't confirmed -->
+              <md-button class="md-primary md-raised" type="submit" @click.native="createUser()" :disabled="!isPasswordValid">
+                Sign Up
+              </md-button>
+            </md-layout>
           </md-layout>
 
           <!-- Sign up with social media -->
@@ -46,13 +63,6 @@
             </md-button>
             <md-button class="md-raised">Sign in with Google</md-button>
           </md-layout>
-        </md-layout>
-
-        <md-layout md-align="end">
-          <!-- Create a user when user clicks Sign Up button. Disable button if password isn't confirmed -->
-          <md-button type="submit" @click.native="createUser()" :disabled="!isPasswordValid">
-            Sign Up
-          </md-button>
         </md-layout>
       </form>
     </md-whiteframe>
@@ -125,8 +135,14 @@
     .md-whiteframe
       height: 100%
       width: 100%
-      margin: $bs * 2
+      margin: $bs * 3 $bs * 5
 
       .md-title
         text-align: center
+
+      [main-content]
+        margin-top: $bs * 5
+
+        [manual-signup]
+          margin: $bs
 </style>
