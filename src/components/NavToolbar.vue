@@ -95,15 +95,8 @@
         <md-tooltip>Reach out to us!</md-tooltip>
       </md-menu>
 
-      <!-- Login button that opens a modal which you can use to login via social media or custom account -->
-      <md-button>
-        Login
-      </md-button>
-
       <!-- Signup button that opens a model which you can use to login via social media or custom account -->
-      <md-button>
-        <router-link to="signup">Sign Up</router-link>
-      </md-button>
+      <router-link to="signup" class="md-button">LOG IN/SIGN UP</router-link>
     </div>
 
     <!-- Textual information -->
