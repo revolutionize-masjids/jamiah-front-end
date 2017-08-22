@@ -1,18 +1,15 @@
 <!-- How users will be able to sign up to the app. They can use social media accounts like Facebook and possibly make their own accounts using custom email and password. -->
 
 <template>
-  <md-layout root-element md-align="center">
-    <md-card>
+  <md-layout md-align="center" signup-page>
+    <md-whiteframe>
       <form @submit.stop.prevent="createUser">
-        <md-card-header>
-          <md-card-header-text>
-            <div class="md-title">Create Account</div>
-          </md-card-header-text>
-        </md-card-header>
+        <div class="md-title">Create Account</div>
 
-        <md-card-content>
-          <md-layout>
-            <!-- Manual signup -->
+        <!-- Main content -->
+        <md-layout>
+          <!-- Manual signup section -->
+          <md-layout md-column manual-signup>
             <md-layout>
               <md-input-container>
                 <label>First Name</label>
@@ -23,45 +20,43 @@
                 <label>Last Name</label>
                 <md-input v-model="lastName" type="text" required />
               </md-input-container>
-
-              <md-input-container>
-                <label>Email</label>
-                <md-input v-model="email" type="email" required />
-              </md-input-container>
-
-              <md-input-container md-has-password>
-                <label>Password</label>
-                <md-input type="password" v-model="password" required />
-              </md-input-container>
-
-              <md-input-container md-has-password>
-                <label>Re-enter Password</label>
-                <md-input type="password" v-model="confirmPassword" required />
-              </md-input-container>
             </md-layout>
 
-            <!-- Sign up with social media -->
-            <md-layout md-column>
-              <!-- Signup with Facebook -->
-              <!-- <md-button @click.native="authenticate('facebook')">
-                Signup with Facebook
-              </md-button> -->
-              <md-button class="md-raised">Sign in with Facebook</md-button>
-              <md-button class="md-raised">Sign in with Google</md-button>
-            </md-layout>
-          </md-layout>
-        </md-card-content>
+            <md-input-container>
+              <label>Email</label>
+              <md-input v-model="email" type="email" required />
+            </md-input-container>
 
-        <md-card-actions>
-          <md-layout md-align="end">
-            <!-- Create a user when user clicks Sign Up button. Disable button if password isn't confirmed -->
-            <md-button type="submit" @click.native="createUser()" :disabled="!isPasswordValid">
-              Sign Up
-            </md-button>
+            <md-input-container md-has-password>
+              <label>Password</label>
+              <md-input type="password" v-model="password" required />
+            </md-input-container>
+
+            <md-input-container md-has-password>
+              <label>Re-enter Password</label>
+              <md-input type="password" v-model="confirmPassword" required />
+            </md-input-container>
           </md-layout>
-        </md-card-actions>
+
+          <!-- Sign up with social media -->
+          <md-layout md-column social-media-signup>
+            <!-- Signup with Facebook -->
+            <!-- <md-button @click.native="authenticate('facebook')">
+              Signup with Facebook
+            </md-button> -->
+            <md-button class="md-raised">Sign in with Facebook</md-button>
+            <md-button class="md-raised">Sign in with Google</md-button>
+          </md-layout>
+        </md-layout>
+
+        <md-layout md-align="end">
+          <!-- Create a user when user clicks Sign Up button. Disable button if password isn't confirmed -->
+          <md-button type="submit" @click.native="createUser()" :disabled="!isPasswordValid">
+            Sign Up
+          </md-button>
+        </md-layout>
       </form>
-    </md-card>
+    </md-whiteframe>
   </md-layout>
 </template>
 
@@ -124,9 +119,15 @@
 </script>
 
 <style lang="sass">
-  [root-element]
-    height: 100vh
+  // use global variables
+  @import '../styles/variables.sass'
 
-    .md-title
-      text-align: center
+  [signup-page]
+    .md-whiteframe
+      height: 100%
+      width: 100%
+      margin: $bs * 2
+
+      .md-title
+        text-align: center
 </style>
