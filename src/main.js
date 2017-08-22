@@ -9,6 +9,7 @@ import router from '@/router'
 import apolloProvider from '@/lib/apollo'
 import '@/lib/theme'
 import '@/lib/resource'
+import '@/lib/vee-validate'
 
 Vue.config.productionTip = false
 
