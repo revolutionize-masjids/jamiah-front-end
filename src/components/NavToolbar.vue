@@ -114,7 +114,7 @@
     <!-- Textual information -->
     <div class="md-toolbar-container text-content">
       <!-- Masjid name. Take users back to home page -->
-      <router-link to="/" class="md-title">
+      <router-link to="/" class="md-title md-button">
         East Elmhurst Jam-E Muslim Center
       </router-link>
 
