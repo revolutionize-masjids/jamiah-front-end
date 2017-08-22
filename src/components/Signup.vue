@@ -1,15 +1,15 @@
 <!-- How users will be able to sign up to the app. They can use social media accounts like Facebook and possibly make their own accounts using custom email and password. -->
 
 <template>
-  <md-layout md-align="center" signup-page>
+  <md-layout md-align="center" class="signup-page">
     <md-whiteframe>
       <form @submit.stop.prevent="createUser">
         <div class="md-title">Create Account</div>
 
         <!-- Main content -->
-        <md-layout md-gutter="40" main-content>
+        <md-layout md-gutter="40" class="main-content">
           <!-- Manual signup section -->
-          <md-layout md-column manual-signup>
+          <md-layout md-column class="manual-signup">
             <md-layout md-gutter="24">
               <md-layout md-flex="50">
                 <md-input-container>
@@ -47,16 +47,18 @@
               </md-layout>
             </md-layout>
 
-            <md-layout md-align="center">
+            <!-- <md-layout md-align="center"> -->
               <!-- Create a user when user clicks Sign Up button. Disable button if password isn't confirmed -->
+            <md-layout md-align="center">
               <md-button class="md-primary md-raised" type="submit" @click.native="createUser()" :disabled="!isPasswordValid">
                 Sign Up
               </md-button>
             </md-layout>
+            <!-- </md-layout> -->
           </md-layout>
 
           <!-- Sign up with social media -->
-          <md-layout md-column social-media-signup>
+          <md-layout class="social-media-signup" md-column>
             <!-- Signup with Facebook -->
             <md-button class="md-raised" @click.native="authenticate('facebook')">
               Sign up with Facebook
@@ -131,7 +133,7 @@
   // use global variables
   @import '../styles/variables.sass'
 
-  [signup-page]
+  .signup-page
     .md-whiteframe
       height: 100%
       width: 100%
@@ -140,9 +142,13 @@
       .md-title
         text-align: center
 
-      [main-content]
+      .main-content
         margin-top: $bs * 5
 
-        [manual-signup]
-          margin: $bs
+        .manual-signup
+          height: 100%
+
+        .manual-signup, .social-media-signup
+          margin: 0 $bs * 5
+          padding: 0
 </style>
