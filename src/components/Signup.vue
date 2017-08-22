@@ -11,10 +11,10 @@
         <form @submit.stop.prevent="createUser">
           <md-card-header>
             <md-card-header-text>
-              <div class="md-title">Sign Up</div>
-              <div class="subhead">Start engaging with your own community!</div>
+              <div class="md-title">Create Account</div>
             </md-card-header-text>
           </md-card-header>
+
           <md-card-content>
               <md-input-container>
                 <label>Email</label>
@@ -104,4 +104,7 @@
 <style lang="sass">
   [root-element]
     height: 100vh
+
+    .md-title
+      text-align: center
 </style>
