@@ -12,34 +12,55 @@
           <md-layout md-column class="manual-signup">
             <md-layout md-gutter="24">
               <md-layout md-flex="50">
-                <md-input-container>
+                <md-input-container
+                :class="{ 'md-input-invalid': errors.has('firstName') }">
                   <label>First Name</label>
-                  <md-input v-model="firstName" type="text" required />
+                  <md-input v-validate="'required|alpha'" v-model="firstName" type="text" name="firstName" required />
+                  <span class="md-error">
+                    {{ errors.first('firstName') }}
+                  </span>
                 </md-input-container>
               </md-layout>
 
               <md-layout md-flex="50">
-                <md-input-container>
+                <md-input-container
+                :class="{ 'md-input-invalid': errors.has('lastName') }">
                   <label>Last Name</label>
-                  <md-input v-model="lastName" type="text" required />
+                  <md-input v-validate="'required|alpha'" v-model="lastName" type="text" name="lastName" required />
+                  <span class="md-error">
+                    {{ errors.first('lastName') }}
+                  </span>
                 </md-input-container>
               </md-layout>
             </md-layout>
 
-            <md-input-container>
+            <md-input-container
+            :class="{ 'md-input-invalid': errors.has('email') }">
               <label>Email</label>
-              <md-input v-model="email" type="email" required />
+              <md-input v-validate="'required|email'" v-model="email" type="email" name="email" required />
+              <span class="md-error">
+                {{ errors.first('email') }}
+              </span>
             </md-input-container>
 
+            <!-- Password & confirmation -->
             <md-layout md-gutter="24">
               <md-layout md-flex="50">
-                <md-input-container md-has-password>
+                <md-input-container md-has-password
+                :class="{ 'md-input-invalid': errors.has('password') }">
                   <label>Password</label>
-                  <md-input type="password" v-model="password" required />
+                  <md-input v-validate="'required|alpha_num|min:6'" type="password" v-model="password" name="password" required />
+                  <span class="md-error">
+                    {{ errors.first('password') }}
+                  </span>
                 </md-input-container>
-                <md-input-container md-has-password>
-                  <label>Re-enter Password</label>
-                  <md-input type="password" v-model="confirmPassword" required />
+                <md-input-container md-has-password
+                :class="{ 'md-input-invalid': errors.has('confirmPassword') }">
+                  <label>Confirm Password</label>
+                  <md-input v-validate="'required|confirmed:password'" type="password" v-model="confirmPassword" name="confirmPassword" required />
+                  <span class="md-error">
+                    {{ errors.first('confirmPassword') }}
+                  </span>
                 </md-input-container>
               </md-layout>
               <md-layout md-flex="50">
