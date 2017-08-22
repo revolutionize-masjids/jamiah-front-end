@@ -12,7 +12,7 @@
       <span style="flex: 1;"></span>
 
       <!-- List of services -->
-      <md-menu md-size="4">
+      <!-- <md-menu md-size="4">
         <md-button md-menu-trigger>Services</md-button>
 
         <md-menu-content>
@@ -46,7 +46,19 @@
         </md-menu-content>
 
         <md-tooltip>We have many programs & services!</md-tooltip>
-      </md-menu>
+      </md-menu> -->
+
+      <!-- Button that directs user to the forums -->
+      <md-button>
+        <span>NEWS & EVENTS</span>
+        <md-tooltip>Learn about the latest news and events</md-tooltip>
+      </md-button>
+
+      <!-- Button that directs user to the forums -->
+      <md-button>
+        <span>Forums</span>
+        <md-tooltip>Discuss with the community</md-tooltip>
+      </md-button>
 
       <!-- Button that directs user to the "Learn about Islam" page -->
       <md-button>
@@ -96,7 +108,7 @@
       </md-menu>
 
       <!-- Signup button that opens a model which you can use to login via social media or custom account -->
-      <router-link to="signup" class="md-button">LOG IN/SIGN UP</router-link>
+      <router-link to="signup" class="md-button">Login/Signup</router-link>
     </div>
 
     <!-- Textual information -->
