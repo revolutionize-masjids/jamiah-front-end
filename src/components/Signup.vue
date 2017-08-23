@@ -2,14 +2,14 @@
 
 <template>
   <md-layout md-align="center" class="signup-page">
-    <md-whiteframe>
+    <md-whiteframe class="stretch-height stretch-width">
       <form @submit.prevent="validateBeforeSubmit">
         <div class="md-title">Create Account</div>
 
         <!-- Main content -->
         <md-layout md-gutter="40" class="main-content">
           <!-- Manual signup section -->
-          <md-layout md-column class="manual-signup">
+          <md-layout md-column class="manual-signup stretch-height">
             <md-layout md-gutter="24" class="form-row">
               <!-- First name -->
               <md-layout md-flex="50">
@@ -74,10 +74,8 @@
               </md-layout>
             </md-layout>
 
-            <!-- <md-layout md-align="center"> -->
-              <!-- Create a user when user clicks Sign Up button. Disable button if password isn't confirmed -->
             <md-layout md-align="center">
-              <md-button class="md-primary md-raised" type="submit">
+              <md-button class="md-primary md-raised stretch-width" type="submit">
                 Sign Up
               </md-button>
             </md-layout>
@@ -184,8 +182,6 @@
 
   .signup-page
     .md-whiteframe
-      height: 100%
-      width: 100%
       margin: $bs * 3 $bs * 5
 
       .md-title
@@ -197,8 +193,6 @@
         margin-top: $bs * 5
 
         .manual-signup
-          height: 100%
-
           .form-row
             padding-top: 0
             padding-bottom: 0
