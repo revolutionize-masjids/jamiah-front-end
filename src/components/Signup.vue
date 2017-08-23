@@ -91,10 +91,12 @@
             <!-- Signup with Facebook -->
             <md-layout md-align="center" md-vertical-align="center" md-column>
               <md-button class="md-raised facebook-signup-button social-media-button" @click.native="authenticate('facebook')">
+                <md-icon :md-src="facebookLogo"></md-icon>
                 <span>Sign up with Facebook</span>
               </md-button>
               <md-button class="md-raised google-signup-button social-media-button">
-                Sign in with Google
+                <md-icon :md-src="googlePlusLogo"></md-icon>
+                <span>Sign in with Google</span>
               </md-button>
             </md-layout>
           </md-layout>
@@ -107,6 +109,9 @@
 <script>
   import gql from 'graphql-tag'
 
+  import facebookLogo from '@/assets/icons/facebook-logo.svg'
+  import googlePlusLogo from '@/assets/icons/google-plus-logo.svg'
+
   export default {
     data: function () {
       return ({
@@ -115,7 +120,11 @@
         lastName: null,
         email: null,
         password: null,
-        confirmPassword: null
+        confirmPassword: null,
+
+        // assets
+        facebookLogo,
+        googlePlusLogo
       })
     },
     // define queries
@@ -229,11 +238,15 @@
           .social-media-signup
             .social-media-button
               color: white
-              padding: $bs / 2
+              padding: $bs / 2 $bs / 2 $bs /2 $bs * 3
               width: $bs * 43
               font-weight: lighter
               border-radius: 0
               text-transform: none
+              text-align: left
+
+              .md-icon
+                margin-right: $bs * 5
 
             .facebook-signup-button
               background-color: #3b5998
