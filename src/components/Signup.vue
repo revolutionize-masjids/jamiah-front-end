@@ -188,6 +188,8 @@
 
       .md-title
         text-align: center
+        color: $color-primary
+        margin-top: $bs * 5
 
       .main-content
         margin-top: $bs * 5
