@@ -206,7 +206,6 @@
           margin-top: $bs * 5
 
           .md-button
-            border-radius: $bs
             margin-left: 0
             margin-right: 0
 
@@ -238,6 +237,8 @@
               padding: $bs / 2
               width: $bs * 43
               font-weight: lighter
+              border-radius: 0
+              text-transform: none
 
             .facebook-signup-button
               background-color: #3b5998
