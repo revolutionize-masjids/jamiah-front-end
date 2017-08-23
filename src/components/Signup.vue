@@ -2,7 +2,7 @@
 
 <template>
   <md-layout md-align="center" class="signup-page">
-    <md-whiteframe class="stretch-height stretch-width" md-elevation="6">
+    <md-whiteframe md-elevation="6">
       <form @submit.prevent="validateBeforeSubmit">
         <div class="md-title">Create Account</div>
 
@@ -190,10 +190,12 @@
 
   .signup-page
     .md-whiteframe
-      margin: $bs * 3 $bs * 5
+      height: $bs * 87
+      width: $bs * 160
+      margin: $bs * 8 $bs * 10
 
       form
-        margin: $bs * 8
+        margin: $bs * 9 $bs * 17
 
         .md-title
           text-align: center
@@ -222,6 +224,7 @@
 
               .md-input
                 border: 1px solid $color-accent
+                height: $bs * 5
 
               a
                 color: $color-mat-blue
@@ -230,7 +233,7 @@
             .social-media-button
               color: white
               padding: $bs / 2
-              width: 75%
+              width: $bs * 43
               font-weight: lighter
 
             .facebook-signup-button
