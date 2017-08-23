@@ -187,26 +187,28 @@
     .md-whiteframe
       margin: $bs * 3 $bs * 5
 
-      .md-title
-        text-align: center
-        color: $color-primary
-        margin-top: $bs * 5
+      form
+        margin: $bs * 8
 
-      .main-content
-        margin-top: $bs * 5
+        .md-title
+          text-align: center
+          color: $color-primary
 
-        .manual-signup
-          .form-row
-            padding-top: 0
-            padding-bottom: 0
+        .main-content
+          margin-top: $bs * 5
 
-            .md-input, label
-              padding-left: $bs
+          .manual-signup
+            .form-row
+              padding-top: 0
+              padding-bottom: 0
 
-            .md-input
-              border: 1px solid $color-accent
+              .md-input, label
+                padding-left: $bs
 
-        .manual-signup, .social-media-signup
-          margin: 0 $bs * 5
-          padding: 0
+              .md-input
+                border: 1px solid $color-accent
+
+          .manual-signup, .social-media-signup
+            margin: 0 $bs * 5
+            padding: 0
 </style>
