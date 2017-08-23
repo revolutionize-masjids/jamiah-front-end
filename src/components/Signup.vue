@@ -74,14 +74,13 @@
               </md-layout>
             </md-layout>
 
-            <md-layout md-align="center" class="form-row">
-              <p>
-                <strong>By clicking, you are agreeing with the</strong>
-                <a href="#">Terms and Agreements</a>
-              </p>
-              <md-button class="md-primary md-raised stretch-width submit-button" type="submit">
+            <md-layout class="form-row signup-button-row">
+              <md-button class="md-primary md-raised" type="submit">
                 Sign Up
               </md-button>
+              <p class="md-caption">
+                By clicking, you are agreeing with the <a href="#">Terms and Agreements</a>
+              </p>
             </md-layout>
             <!-- </md-layout> -->
           </md-layout>
@@ -236,6 +235,15 @@
 
               a
                 color: $color-mat-blue
+
+            .signup-button-row
+              .md-button
+                width: $bs * 19
+                height: $bs * 5
+
+              .md-caption
+                max-width: $bs * 28
+                padding-left: $bs * 2
 
           .social-media-signup
             .social-media-button
