@@ -210,6 +210,7 @@
 
               .submit-button
                 text-transform: none
+                border-radius: $bs
 
           .manual-signup, .social-media-signup
             margin: 0 $bs * 5
