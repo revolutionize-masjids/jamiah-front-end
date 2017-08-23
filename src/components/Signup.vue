@@ -74,7 +74,7 @@
               </md-layout>
             </md-layout>
 
-            <md-layout md-align="center">
+            <md-layout md-align="center" class="form-row">
               <p>
                 <strong>By clicking, you are agreeing with the</strong> <a>Terms and Agreements</a>
               </p>
