@@ -7,7 +7,7 @@
         <div class="md-headline">Sign Up</div>
 
         <!-- Main content -->
-        <md-layout md-gutter="40" class="main-content">
+        <md-layout class="main-content">
           <!-- Manual signup section -->
           <md-layout md-column class="manual-signup stretch-height" md-flex="55">
             <md-layout md-gutter="24" class="form-row">
@@ -219,6 +219,9 @@
             margin-right: 0
 
           .manual-signup
+            border-right: 1px solid #979797
+            padding-right: $bs * 10
+
             .form-row
               padding-top: 0
               padding-bottom: 0
@@ -246,6 +249,9 @@
                 padding-left: $bs * 2
 
           .social-media-signup
+            border-left: 1px solid #979797
+            padding-left: $bs * 10
+
             .social-media-button
               color: white
               padding: $bs / 2 $bs / 2 $bs /2 $bs * 3
