@@ -52,7 +52,7 @@
               <!-- Password -->
               <md-layout md-flex="50">
                 <!-- Password must be alphanumeric characters min 6 chars -->
-                <md-input-container md-has-password
+                <md-input-container
                 :class="{ 'md-input-invalid': errors.has('password') }">
                   <label>Password</label>
                   <md-input v-validate="'required|alpha_num|min:6'" type="password" v-model="password" name="password" required />
@@ -63,7 +63,7 @@
               </md-layout>
               <!-- Confirm password -->
               <md-layout md-flex="50">
-                <md-input-container md-has-password
+                <md-input-container
                 :class="{ 'md-input-invalid': errors.has('confirmPassword') }">
                   <label>Confirm Password</label>
                   <md-input v-validate="'required|confirmed:password'" type="password" v-model="confirmPassword" name="confirmPassword" required />
@@ -199,7 +199,7 @@
 
             .md-input, label
               padding-left: $bs
-              
+
             .md-input
               border: 1px solid $color-accent
 
