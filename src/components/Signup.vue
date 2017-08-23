@@ -207,7 +207,6 @@
 
           .md-button
             border-radius: $bs
-            text-transform: none
             margin-left: 0
             margin-right: 0
 
