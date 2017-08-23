@@ -193,6 +193,7 @@
       height: $bs * 87
       width: $bs * 160
       margin: $bs * 8 $bs * 10
+      background-color: white
 
       form
         margin: $bs * 9 $bs * 17
