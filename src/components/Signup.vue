@@ -201,13 +201,13 @@
 
   .signup-page
     .md-whiteframe
-      height: $bs * 87
+      height: $bs * 72
       width: $bs * 160
-      margin: $bs * 8 $bs * 10
+      margin: $bs * 8 $bs * 13
       background-color: white
 
       form
-        margin: $bs * 9 $bs * 17
+        margin: $bs * 9 $bs * 18 $bs * 11 $bs * 18
 
         .md-headline
           color: black
