@@ -4,7 +4,7 @@
   <md-layout md-align="center" class="signup-page">
     <md-whiteframe md-elevation="6">
       <form @submit.prevent="validateBeforeSubmit">
-        <div class="md-title">Create Account</div>
+        <div class="md-headline">Sign Up</div>
 
         <!-- Main content -->
         <md-layout md-gutter="40" class="main-content">
@@ -80,7 +80,7 @@
                 <a href="#">Terms and Agreements</a>
               </p>
               <md-button class="md-primary md-raised stretch-width submit-button" type="submit">
-                Create Account
+                Sign Up
               </md-button>
             </md-layout>
             <!-- </md-layout> -->
@@ -198,9 +198,8 @@
       form
         margin: $bs * 9 $bs * 17
 
-        .md-title
-          text-align: center
-          color: $color-primary
+        .md-headline
+          color: black
 
         .main-content
           margin-top: $bs * 5
