@@ -10,7 +10,7 @@
         <md-layout md-gutter="40" class="main-content">
           <!-- Manual signup section -->
           <md-layout md-column class="manual-signup">
-            <md-layout md-gutter="24">
+            <md-layout md-gutter="24" class="form-row">
               <!-- First name -->
               <md-layout md-flex="50">
                 <md-input-container
@@ -36,17 +36,20 @@
             </md-layout>
 
             <!-- Email -->
-            <md-input-container
-            :class="{ 'md-input-invalid': errors.has('email') }">
-              <label>Email</label>
-              <md-input v-validate="'required|email'" v-model="email" type="email" name="email" required />
-              <span class="md-error">
-                {{ errors.first('email') }}
-              </span>
-            </md-input-container>
+            <md-layout class="form-row">
+              <md-input-container
+              :class="{ 'md-input-invalid': errors.has('email') }">
+                <label>Email</label>
+                <md-input v-validate="'required|email'" v-model="email" type="email" name="email" required />
+                <span class="md-error">
+                  {{ errors.first('email') }}
+                </span>
+              </md-input-container>
+            </md-layout>
 
             <!-- Password & confirmation -->
-            <md-layout md-gutter="24">
+            <md-layout md-gutter="24" class="form-row">
+              <!-- Password -->
               <md-layout md-flex="50">
                 <!-- Password must be alphanumeric characters min 6 chars -->
                 <md-input-container md-has-password
@@ -57,7 +60,9 @@
                     {{ errors.first('password') }}
                   </span>
                 </md-input-container>
-                <!-- Confirm password -->
+              </md-layout>
+              <!-- Confirm password -->
+              <md-layout md-flex="50">
                 <md-input-container md-has-password
                 :class="{ 'md-input-invalid': errors.has('confirmPassword') }">
                   <label>Confirm Password</label>
@@ -66,9 +71,6 @@
                     {{ errors.first('confirmPassword') }}
                   </span>
                 </md-input-container>
-              </md-layout>
-              <md-layout md-flex="50">
-                <span>Passwords must be at least 6 alphanumerical characters and contain one number and symbol.</span>
               </md-layout>
             </md-layout>
 
@@ -196,6 +198,10 @@
 
         .manual-signup
           height: 100%
+
+          .form-row
+            padding-top: 0
+            padding-bottom: 0
 
         .manual-signup, .social-media-signup
           margin: 0 $bs * 5
