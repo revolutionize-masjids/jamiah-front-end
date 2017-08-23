@@ -9,7 +9,7 @@
         <!-- Main content -->
         <md-layout md-gutter="40" class="main-content">
           <!-- Manual signup section -->
-          <md-layout md-column class="manual-signup stretch-height">
+          <md-layout md-column class="manual-signup stretch-height" md-flex="55">
             <md-layout md-gutter="24" class="form-row">
               <!-- First name -->
               <md-layout md-flex="50">
@@ -87,7 +87,7 @@
           </md-layout>
 
           <!-- Sign up with social media -->
-          <md-layout class="social-media-signup" md-column>
+          <md-layout class="social-media-signup" md-column md-flex="45">
             <!-- Signup with Facebook -->
             <md-layout md-vertical-align="center" md-column>
               <md-button class="md-raised facebook-signup-button social-media-button" @click.native="authenticate('facebook')">
@@ -208,10 +208,6 @@
           .md-button
             margin-left: 0
             margin-right: 0
-
-          .manual-signup, .social-media-signup
-            margin: 0 $bs * 5
-            padding: 0
 
           .manual-signup
             .form-row
