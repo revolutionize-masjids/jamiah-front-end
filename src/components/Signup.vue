@@ -197,6 +197,12 @@
             padding-top: 0
             padding-bottom: 0
 
+            .md-input, label
+              padding-left: $bs
+              
+            .md-input
+              border: 1px solid $color-accent
+
         .manual-signup, .social-media-signup
           margin: 0 $bs * 5
           padding: 0
