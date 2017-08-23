@@ -3,7 +3,7 @@
 <template>
   <md-layout md-align="center" class="signup-page">
     <md-whiteframe>
-      <form @submit.stop.prevent="createUser">
+      <form @submit.prevent="validateBeforeSubmit">
         <div class="md-title">Create Account</div>
 
         <!-- Main content -->
@@ -11,6 +11,7 @@
           <!-- Manual signup section -->
           <md-layout md-column class="manual-signup">
             <md-layout md-gutter="24">
+              <!-- First name -->
               <md-layout md-flex="50">
                 <md-input-container
                 :class="{ 'md-input-invalid': errors.has('firstName') }">
@@ -21,7 +22,7 @@
                   </span>
                 </md-input-container>
               </md-layout>
-
+              <!-- Last name -->
               <md-layout md-flex="50">
                 <md-input-container
                 :class="{ 'md-input-invalid': errors.has('lastName') }">
@@ -34,6 +35,7 @@
               </md-layout>
             </md-layout>
 
+            <!-- Email -->
             <md-input-container
             :class="{ 'md-input-invalid': errors.has('email') }">
               <label>Email</label>
@@ -46,6 +48,7 @@
             <!-- Password & confirmation -->
             <md-layout md-gutter="24">
               <md-layout md-flex="50">
+                <!-- Password must be alphanumeric characters min 6 chars -->
                 <md-input-container md-has-password
                 :class="{ 'md-input-invalid': errors.has('password') }">
                   <label>Password</label>
@@ -54,6 +57,7 @@
                     {{ errors.first('password') }}
                   </span>
                 </md-input-container>
+                <!-- Confirm password -->
                 <md-input-container md-has-password
                 :class="{ 'md-input-invalid': errors.has('confirmPassword') }">
                   <label>Confirm Password</label>
@@ -71,7 +75,7 @@
             <!-- <md-layout md-align="center"> -->
               <!-- Create a user when user clicks Sign Up button. Disable button if password isn't confirmed -->
             <md-layout md-align="center">
-              <md-button class="md-primary md-raised" type="submit" @click.native="createUser()" :disabled="!isPasswordValid">
+              <md-button class="md-primary md-raised" type="submit">
                 Sign Up
               </md-button>
             </md-layout>
@@ -107,9 +111,15 @@
     },
     // define queries
     apollo: {},
+    mounted: function () {
+      this.$on('form-submitted', () => {
+        this.createUser()
+      })
+    },
     methods: {
       // create a new user using the enter email and password
       createUser () {
+        console.log('create user')
         // send a mutation to the api
         this.$apollo.mutate({
           // define the mutation using GraphQL syntax
@@ -143,6 +153,18 @@
         } catch (error) {
           console.log('error authenticating', error)
         }
+      },
+      // validate the form before submission to make sure there are no errors
+      validateBeforeSubmit () {
+        this.$validator.validateAll().then((result) => {
+          if (result) {
+            // eslint-disable-next-line
+            this.$emit('form-submitted')
+            return
+          }
+
+          alert('Correct them errors!')
+        })
       }
     },
     computed: {
