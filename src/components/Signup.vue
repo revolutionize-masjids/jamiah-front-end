@@ -114,18 +114,22 @@
         this.$apollo.mutate({
           // define the mutation using GraphQL syntax
           mutation: gql`
-            mutation CreateAUser($userEmail: String!, $userPassword: String!) {
-              createUser(email: $userEmail, password: $userPassword) {
+            mutation CreateAUser($userEmail: String!, $userPassword: String!, $firstName: String!, $lastName: String!) {
+              createUser(email: $userEmail, password: $userPassword, firstName: $firstName, lastName: $lastName) {
                 _id
                 email
                 password
+                firstName
+                lastName
               }
             }
           `,
           // define the variables to be used as parameters for the mutation
           variables: {
             userEmail: this.email,
-            userPassword: this.password
+            userPassword: this.password,
+            firstName: this.firstName,
+            lastName: this.lastName
           }
         })
       },
