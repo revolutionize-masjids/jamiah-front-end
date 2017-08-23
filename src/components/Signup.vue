@@ -89,7 +89,7 @@
           <!-- Sign up with social media -->
           <md-layout class="social-media-signup" md-column md-flex="45">
             <!-- Signup with Facebook -->
-            <md-layout md-vertical-align="center" md-column>
+            <md-layout md-align="center" md-vertical-align="center" md-column>
               <md-button class="md-raised facebook-signup-button social-media-button" @click.native="authenticate('facebook')">
                 <span>Sign up with Facebook</span>
               </md-button>
