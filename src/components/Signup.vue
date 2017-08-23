@@ -78,7 +78,7 @@
               <p>
                 <strong>By clicking, you are agreeing with the</strong> <a>Terms and Agreements</a>
               </p>
-              <md-button class="md-primary md-raised stretch-width" type="submit">
+              <md-button class="md-primary md-raised stretch-width submit-button" type="submit">
                 Create Account
               </md-button>
             </md-layout>
@@ -207,6 +207,9 @@
 
               .md-input
                 border: 1px solid $color-accent
+
+              .submit-button
+                text-transform: none
 
           .manual-signup, .social-media-signup
             margin: 0 $bs * 5
