@@ -76,7 +76,8 @@
 
             <md-layout md-align="center" class="form-row">
               <p>
-                <strong>By clicking, you are agreeing with the</strong> <a>Terms and Agreements</a>
+                <strong>By clicking, you are agreeing with the</strong>
+                <a href="#">Terms and Agreements</a>
               </p>
               <md-button class="md-primary md-raised stretch-width submit-button" type="submit">
                 Create Account
@@ -207,6 +208,9 @@
 
               .md-input
                 border: 1px solid $color-accent
+
+              a
+                color: $color-mat-blue
 
               .submit-button
                 text-transform: none
