@@ -2,7 +2,7 @@
 
 <template>
   <md-layout md-align="center" class="signup-page">
-    <md-whiteframe class="stretch-height stretch-width">
+    <md-whiteframe class="stretch-height stretch-width" md-elevation="6">
       <form @submit.prevent="validateBeforeSubmit">
         <div class="md-title">Create Account</div>
 
