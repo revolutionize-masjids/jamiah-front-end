@@ -89,10 +89,14 @@
           <!-- Sign up with social media -->
           <md-layout class="social-media-signup" md-column>
             <!-- Signup with Facebook -->
-            <md-button class="md-raised" @click.native="authenticate('facebook')">
-              Sign up with Facebook
-            </md-button>
-            <md-button class="md-raised">Sign in with Google</md-button>
+            <md-layout md-vertical-align="center" md-column>
+              <md-button class="md-raised facebook-signup-button social-media-button" @click.native="authenticate('facebook')">
+                <span>Sign up with Facebook</span>
+              </md-button>
+              <md-button class="md-raised google-signup-button social-media-button">
+                Sign in with Google
+              </md-button>
+            </md-layout>
           </md-layout>
         </md-layout>
       </form>
@@ -106,6 +110,7 @@
   export default {
     data: function () {
       return ({
+        // signup form model
         firstName: null,
         lastName: null,
         email: null,
@@ -123,7 +128,6 @@
     methods: {
       // create a new user using the enter email and password
       createUser () {
-        console.log('create user')
         // send a mutation to the api
         this.$apollo.mutate({
           // define the mutation using GraphQL syntax
@@ -198,6 +202,16 @@
         .main-content
           margin-top: $bs * 5
 
+          .md-button
+            border-radius: $bs
+            text-transform: none
+            margin-left: 0
+            margin-right: 0
+
+          .manual-signup, .social-media-signup
+            margin: 0 $bs * 5
+            padding: 0
+
           .manual-signup
             .form-row
               padding-top: 0
@@ -212,12 +226,20 @@
               a
                 color: $color-mat-blue
 
-              .submit-button
-                text-transform: none
-                border-radius: $bs
-                margin: 0
+          .social-media-signup
+            .social-media-button
+              color: white
+              padding: $bs / 2
+              width: 75%
+              font-weight: lighter
 
-          .manual-signup, .social-media-signup
-            margin: 0 $bs * 5
-            padding: 0
+            .facebook-signup-button
+              background-color: #3b5998
+              &:hover
+                background-color: lighten(#3b5998, 10%)
+
+            .google-signup-button
+              background-color: #d34836
+              &:hover
+                background-color: lighten(#d34836, 10%)
 </style>
