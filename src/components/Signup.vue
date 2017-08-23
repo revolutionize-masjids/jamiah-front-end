@@ -212,7 +212,7 @@
           color: black
 
         .main-content
-          margin-top: $bs * 5
+          margin-top: $bs * 4
 
           .md-button
             margin-left: 0
