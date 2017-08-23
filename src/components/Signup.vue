@@ -75,6 +75,9 @@
             </md-layout>
 
             <md-layout md-align="center">
+              <p>
+                <strong>By clicking, you are agreeing with the</strong> <a>Terms and Agreements</a>
+              </p>
               <md-button class="md-primary md-raised stretch-width" type="submit">
                 Sign Up
               </md-button>
