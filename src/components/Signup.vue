@@ -76,13 +76,17 @@
               </md-layout>
             </md-layout>
 
-            <md-layout class="form-row submit-button-row">
-              <md-button class="md-primary md-raised" type="submit">
-                Sign Up
-              </md-button>
-              <p class="md-caption">
-                By clicking, you are agreeing with the <a href="#">Terms and Agreements</a>
-              </p>
+            <md-layout class="form-row submit-button-row" md-gutter="24">
+              <md-layout>
+                <md-button class="md-primary md-raised" type="submit">
+                  Sign Up
+                </md-button>
+              </md-layout>
+              <md-layout>
+                <p class="md-caption">
+                  By clicking, you are agreeing with the <a href="#">Terms and Agreements</a>
+                </p>
+              </md-layout>
             </md-layout>
             <!-- </md-layout> -->
           </md-layout>
