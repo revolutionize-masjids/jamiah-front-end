@@ -11,8 +11,8 @@
         <!-- Main content -->
         <md-layout class="main-content" md-column-xsmall md-column-small>
           <!-- Manual signup section -->
-          <md-layout md-column class="manual-signup stretch-height" md-flex="55">
-            <md-layout md-gutter="24" class="form-row">
+          <md-layout class="manual-signup stretch-height" md-flex="55" md-column>
+            <md-layout md-gutter="24" class="form-row" md-column-xsmall md-column-small>
               <!-- First name -->
               <md-layout md-flex="50">
                 <md-input-container
@@ -50,7 +50,7 @@
             </md-layout>
 
             <!-- Password & confirmation -->
-            <md-layout md-gutter="24" class="form-row">
+            <md-layout md-gutter="24" class="form-row" md-column-xsmall md-column-small>
               <!-- Password -->
               <md-layout md-flex="50">
                 <!-- Password must be alphanumeric characters min 6 chars -->
@@ -98,7 +98,7 @@
                   <md-layout md-align="center" md-flex="10" md-flex-offset-xlarge="10">
                     <md-icon :md-src="facebookLogo"></md-icon>
                   </md-layout>
-                  <md-layout md-align="center" md-align-medium="end">
+                  <md-layout md-align="center">
                     <span>Sign up with Facebook</span>
                   </md-layout>
                 </md-layout>
@@ -108,7 +108,7 @@
                   <md-layout md-align="center" md-flex="10" md-flex-offset-xlarge="10">
                     <md-icon :md-src="googlePlusLogo"></md-icon>
                   </md-layout>
-                  <md-layout md-align="center" md-align-medium="end">
+                  <md-layout md-align="center">
                     <span>Sign up with Google</span>
                   </md-layout>
                 </md-layout>
@@ -219,8 +219,15 @@
       margin: $bs * 8 $bs * 13
       background-color: white
 
+      @media (max-width: $bp-small)
+        margin: 0
+        // height: calc(100vh - #{$nav-toolbar-height})
+
       form
         margin: $bs * 9 $bs * 18 $bs * 11 $bs * 18
+
+        @media (max-width: $bp-small)
+          margin: $bs * 5 $bs * 3
 
         .md-headline
           color: black
@@ -235,6 +242,10 @@
           .manual-signup
             border-right: 1px solid #979797
             padding-right: $bs * 10
+
+            @media (max-width: $bp-small)
+              border: none
+              padding: 0
 
             .form-row
               padding-top: 0
@@ -265,6 +276,11 @@
           .social-media-signup
             border-left: 1px solid #979797
             padding-left: $bs * 10
+
+            @media (max-width: $bp-small)
+              border: none
+              padding: 0
+              margin-top: $bs * 3
 
             .social-media-button
               color: white
