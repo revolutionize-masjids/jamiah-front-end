@@ -92,12 +92,24 @@
               <p class="md-caption">OR</p>
               <p class="md-caption">Log in faster by signing up through your social media account</p>
               <md-button class="md-raised facebook-signup-button social-media-button" @click.native="authenticate('facebook')">
-                <md-icon :md-src="facebookLogo"></md-icon>
-                <span>Sign up with Facebook</span>
+                <md-layout>
+                  <md-layout md-flex="10" md-flex-offset-large="10" md-flex-offset-xlarge="10">
+                    <md-icon :md-src="facebookLogo"></md-icon>
+                  </md-layout>
+                  <md-layout md-align="center" md-align-medium="end" md-flex="80" md-hide-small md-hide-xsmall>
+                    <span>Sign up with Facebook</span>
+                  </md-layout>
+                </md-layout>
               </md-button>
               <md-button class="md-raised google-signup-button social-media-button">
-                <md-icon :md-src="googlePlusLogo"></md-icon>
-                <span>Sign in with Google</span>
+                <md-layout>
+                  <md-layout md-flex="20" md-flex-medium="10">
+                    <md-icon :md-src="googlePlusLogo"></md-icon>
+                  </md-layout>
+                  <md-layout md-align="center" md-align-medium="end" md-flex-xlarge="65" md-flex-large="65" md-flex-medium="80" md-hide-small md-hide-xsmall>
+                    <span>Sign up with Google</span>
+                  </md-layout>
+                </md-layout>
               </md-button>
             </md-layout>
           </md-layout>
@@ -254,16 +266,11 @@
 
             .social-media-button
               color: white
-              padding: $bs / 2 $bs / 2 $bs /2 $bs * 3
               width: 100%
               height: $bs * 6
-              font-weight: lighter
+              font-weight: 400
               border-radius: 0
               text-transform: none
-              text-align: left
-
-              .md-icon
-                margin-right: $bs * 5
 
             .facebook-signup-button
               background-color: #3b5998
