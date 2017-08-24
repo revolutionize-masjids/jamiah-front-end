@@ -76,7 +76,7 @@
               </md-layout>
             </md-layout>
 
-            <md-layout class="form-row submit-button-row" md-gutter="24">
+            <md-layout class="form-row submit-button-row" md-gutter="24" md-column-xsmall md-column-small>
               <md-layout>
                 <md-button class="md-primary md-raised" type="submit">
                   Sign Up
