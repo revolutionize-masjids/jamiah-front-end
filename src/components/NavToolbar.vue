@@ -149,6 +149,8 @@
   @import '../styles/variables.sass'
 
   .nav-toolbar
+    height: $nav-toolbar-height
+
     .text-content
       // align text content with action buttons
       padding-right: $bs * 3
