@@ -221,7 +221,7 @@
 
       @media (max-width: $bp-small)
         margin: 0
-        // height: calc(100vh - #{$nav-toolbar-height})
+        min-height: calc(100vh - #{$nav-toolbar-height})
 
       form
         margin: $bs * 9 $bs * 18 $bs * 11 $bs * 18
