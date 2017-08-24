@@ -255,7 +255,7 @@
             .social-media-button
               color: white
               padding: $bs / 2 $bs / 2 $bs /2 $bs * 3
-              width: $bs * 43
+              width: 100%
               height: $bs * 6
               font-weight: lighter
               border-radius: 0
