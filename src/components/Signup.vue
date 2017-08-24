@@ -93,10 +93,10 @@
               <p class="md-caption">Log in faster by signing up through your social media account</p>
               <md-button class="md-raised facebook-signup-button social-media-button" @click.native="authenticate('facebook')">
                 <md-layout>
-                  <md-layout md-flex="10" md-flex-offset-large="10" md-flex-offset-xlarge="10">
+                  <md-layout md-align="center" md-flex="10" md-flex-offset-xlarge="10">
                     <md-icon :md-src="facebookLogo"></md-icon>
                   </md-layout>
-                  <md-layout md-align="center" md-align-medium="end" md-flex="80" md-hide-small md-hide-xsmall>
+                  <md-layout md-align="center" md-align-medium="end" md-hide-small md-hide-xsmall>
                     <span>Sign up with Facebook</span>
                   </md-layout>
                 </md-layout>
