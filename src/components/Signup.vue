@@ -76,7 +76,7 @@
               </md-layout>
             </md-layout>
 
-            <md-layout class="form-row signup-button-row">
+            <md-layout class="form-row submit-button-row">
               <md-button class="md-primary md-raised" type="submit">
                 Sign Up
               </md-button>
@@ -264,7 +264,7 @@
               a
                 color: $color-mat-blue
 
-            .signup-button-row
+            .submit-button-row
               .md-button, .md-caption
                 width: 100%
 
