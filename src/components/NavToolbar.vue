@@ -141,7 +141,7 @@
             </md-button>
             <p class="md-caption">
               <span>New User?</span>
-              <a href="#">Sign Up!</a>
+              <router-link to="signup">Sign up!</router-link>
             </p>
           </md-layout>
         </md-menu-content>
