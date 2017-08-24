@@ -1,13 +1,15 @@
 <!-- How users will be able to sign up to the app. They can use social media accounts like Facebook and possibly make their own accounts using custom email and password. -->
 
 <template>
-  <md-layout md-align="center" class="signup-page">
+  <md-layout md-align="center" md-vertical-align="center" class="signup-page">
     <md-whiteframe md-elevation="3">
       <form @submit.prevent="validateBeforeSubmit">
-        <div class="md-headline">Sign Up</div>
+        <md-layout md-align-small="center">
+          <div class="md-headline">Sign Up</div>
+        </md-layout>
 
         <!-- Main content -->
-        <md-layout class="main-content">
+        <md-layout class="main-content" md-column-xsmall md-column-small>
           <!-- Manual signup section -->
           <md-layout md-column class="manual-signup stretch-height" md-flex="55">
             <md-layout md-gutter="24" class="form-row">
@@ -96,17 +98,17 @@
                   <md-layout md-align="center" md-flex="10" md-flex-offset-xlarge="10">
                     <md-icon :md-src="facebookLogo"></md-icon>
                   </md-layout>
-                  <md-layout md-align="center" md-align-medium="end" md-hide-small md-hide-xsmall>
+                  <md-layout md-align="center" md-align-medium="end">
                     <span>Sign up with Facebook</span>
                   </md-layout>
                 </md-layout>
               </md-button>
               <md-button class="md-raised google-signup-button social-media-button">
                 <md-layout>
-                  <md-layout md-flex="20" md-flex-medium="10">
+                  <md-layout md-align="center" md-flex="10" md-flex-offset-xlarge="10">
                     <md-icon :md-src="googlePlusLogo"></md-icon>
                   </md-layout>
-                  <md-layout md-align="center" md-align-medium="end" md-flex-xlarge="65" md-flex-large="65" md-flex-medium="80" md-hide-small md-hide-xsmall>
+                  <md-layout md-align="center" md-align-medium="end">
                     <span>Sign up with Google</span>
                   </md-layout>
                 </md-layout>
@@ -212,8 +214,8 @@
 
   .signup-page
     .md-whiteframe
-      height: $bs * 72
-      width: $bs * 160
+      height: 100%
+      width: 100%
       margin: $bs * 8 $bs * 13
       background-color: white
 
