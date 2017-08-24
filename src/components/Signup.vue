@@ -265,13 +265,11 @@
                 color: $color-mat-blue
 
             .signup-button-row
-              .md-button
-                width: $bs * 19
-                height: $bs * 5
+              .md-button, .md-caption
+                width: 100%
 
-              .md-caption
-                max-width: $bs * 28
-                padding-left: $bs * 2
+                @media (max-width: $bp-small)
+                  text-align: center
 
           .social-media-signup
             border-left: 1px solid #979797
