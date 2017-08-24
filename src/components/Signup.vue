@@ -230,6 +230,9 @@
       form
         margin: $bs * 9 $bs * 18 $bs * 11 $bs * 18
 
+        @media  (max-width: $bp-medium)
+          margin: $bs * 7 $bs * 5
+
         @media (max-width: $bp-small)
           margin: $bs * 5 $bs * 3
 
@@ -246,6 +249,9 @@
           .manual-signup
             border-right: 1px solid #979797
             padding-right: $bs * 10
+
+            @media (max-width: $bp-medium)
+              padding-right: $bs * 5
 
             @media (max-width: $bp-small)
               border: none
@@ -278,6 +284,9 @@
           .social-media-signup
             border-left: 1px solid #979797
             padding-left: $bs * 10
+
+            @media (max-width: $bp-medium)
+              padding-left: $bs * 5
 
             @media (max-width: $bp-small)
               border: none
