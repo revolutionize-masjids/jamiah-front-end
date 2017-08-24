@@ -230,6 +230,9 @@
       form
         margin: $bs * 9 $bs * 18 $bs * 11 $bs * 18
 
+        @media  (max-width: $bp-medium)
+          margin: $bs * 7 $bs * 5
+
         @media (max-width: $bp-small)
           margin: $bs * 5 $bs * 3
 
