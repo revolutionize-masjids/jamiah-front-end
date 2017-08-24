@@ -108,7 +108,44 @@
       </md-menu>
 
       <!-- Signup button that opens a model which you can use to login via social media or custom account -->
-      <router-link to="signup" class="md-button">Login/Signup</router-link>
+      <!-- <router-link to="signup" class="md-button">Login/Signup</router-link> -->
+      <md-menu md-size="4" md-direction="bottom-right">
+        <md-button md-menu-trigger>
+          Login/Signup
+        </md-button>
+
+        <md-menu-content class="login-menu">
+          <md-layout md-column>
+            <md-input-container>
+              <label>Email</label>
+              <md-input></md-input>
+            </md-input-container>
+            <md-checkbox>
+              Stay signed on
+            </md-checkbox>
+            <md-input-container>
+              <label>Password</label>
+              <md-input></md-input>
+            </md-input-container>
+            <md-button class="md-primary md-raised">
+              Log In
+            </md-button>
+
+            <md-divider></md-divider>
+
+            <md-button class="md-primary md-raised">
+              Login with Facebook
+            </md-button>
+            <md-button class="md-primary md-raised">
+              Log in with Google
+            </md-button>
+            <p class="md-caption">
+              <span>New User?</span>
+              <a href="#">Sign Up!</a>
+            </p>
+          </md-layout>
+        </md-menu-content>
+      </md-menu>
     </div>
 
     <!-- Textual information -->
@@ -155,9 +192,15 @@
       // align text content with action buttons
       padding-right: $bs * 3
 
-    .md-menu
-      .md-menu-content
-        .md-menu-item
-          span
-            color: red !important
+  .login-menu
+    padding: $bs
+    background-color: white
+
+    .md-button
+      width: 100%
+      margin-right: 0
+      margin-left: 0
+
+    // .md-caption
+    //   margin-left: $bs * 3
 </style>
