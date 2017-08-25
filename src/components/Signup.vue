@@ -97,7 +97,16 @@
             <md-layout md-align="center" md-vertical-align="center" md-column>
               <p class="md-caption">OR</p>
               <p class="md-caption">Log in faster by signing up through your social media account</p>
-              <FacebookLoginButton />
+              <md-button class="md-raised facebook-signup-button social-media-button" @click.native="authenticate('facebook')">
+                <md-layout>
+                  <md-layout md-align="center" md-flex="10" md-flex-offset-xlarge="10">
+                    <md-icon :md-src="facebookLogo"></md-icon>
+                  </md-layout>
+                  <md-layout md-align="center" class="button-text">
+                    <span>Sign up with Facebook</span>
+                  </md-layout>
+                </md-layout>
+              </md-button>
               <md-button class="md-raised google-signup-button social-media-button">
                 <md-layout>
                   <md-layout md-align="center" md-flex="10" md-flex-offset-xlarge="10">
@@ -119,14 +128,10 @@
 <script>
   import gql from 'graphql-tag'
 
-  import FacebookLoginButton from '@/components/common/social-media-buttons/FacebookLoginButton'
-
+  import facebookLogo from '@/assets/icons/facebook-logo.svg'
   import googlePlusLogo from '@/assets/icons/google-plus-logo.svg'
 
   export default {
-    components: {
-      FacebookLoginButton
-    },
     data: function () {
       return ({
         // signup form model
@@ -137,14 +142,13 @@
         confirmPassword: null,
 
         // assets
+        facebookLogo,
         googlePlusLogo
       })
     },
     // define queries
     apollo: {},
-    // define what happens during component mount lifecycle hook
     mounted: function () {
-      // listen for when user submits the form with credentials
       this.$on('form-submitted', () => {
         this.createUser()
       })
@@ -174,6 +178,17 @@
             lastName: this.lastName
           }
         })
+      },
+      // Use the Vue-Authenticate package to authenticate account via social
+      // media
+      async authenticate (provider) {
+        try {
+          await this.$auth.authenticate(provider)
+          // Execute application logic after successful social authentication
+          console.log('successfully authenticated')
+        } catch (error) {
+          console.log('error authenticating', error)
+        }
       },
       // validate the form before submission to make sure there are no errors
       validateBeforeSubmit () {
