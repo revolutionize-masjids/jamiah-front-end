@@ -217,17 +217,17 @@
   @import '../styles/variables.sass'
 
   .signup-page
+    height: calc(100vh - #{$nav-toolbar-height})
+
     .md-whiteframe
-      height: 100%
-      width: 100%
-      margin: $bs * 8 $bs * 13
+      width: 80%
       background-color: white
 
-      @media (max-width: $bp-medium)
-        margin: $bs * 6 $bs * 9
+      @media (min-width: $bp-large)
+        width: 60%
 
       @media (max-width: $bp-small)
-        margin: 0
+        width: 100%
         min-height: calc(100vh - #{$nav-toolbar-height})
 
       form
