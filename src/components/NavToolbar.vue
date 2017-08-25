@@ -11,43 +11,6 @@
 
       <span style="flex: 1;"></span>
 
-      <!-- List of services -->
-      <!-- <md-menu md-size="4">
-        <md-button md-menu-trigger>Services</md-button>
-
-        <md-menu-content>
-          <md-subheader>'Ibadah</md-subheader>
-          <md-menu-item>'Eid Prayer</md-menu-item>
-          <md-menu-item>Jummu'ah</md-menu-item>
-          <md-menu-item>Five Daily Prayers</md-menu-item>
-          <md-menu-item>Lectures & Seminars</md-menu-item>
-          <md-divider></md-divider>
-          <md-subheader>Education</md-subheader>
-          <md-menu-item>Saturday School</md-menu-item>
-          <md-menu-item>Sunday School</md-menu-item>
-          <md-menu-item>Youth Activities</md-menu-item>
-          <md-menu-item>Sister's Programs</md-menu-item>
-          <md-menu-item>Adult Islamic Education</md-menu-item>
-          <md-divider></md-divider>
-          <md-menu-item>
-            <div class="md-list-text-container">
-              <span>Marriage Ceremony</span>
-              <span>Nikkah</span>
-            </div>
-          </md-menu-item>
-          <md-menu-item>
-            <div class="md-list-text-container">
-              <span>Funerals</span>
-              <span>Janazah</span>
-            </div>
-          </md-menu-item>
-          <md-divider></md-divider>
-          <md-menu-item>Volunteering</md-menu-item>
-        </md-menu-content>
-
-        <md-tooltip>We have many programs & services!</md-tooltip>
-      </md-menu> -->
-
       <!-- Button that directs user to the forums -->
       <md-button>
         <span>NEWS & EVENTS</span>
