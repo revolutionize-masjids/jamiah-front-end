@@ -258,16 +258,6 @@
               padding-top: 0
               padding-bottom: 0
 
-              .md-input-container
-                margin-top: 0
-
-                .md-input, label
-                  padding-left: $bs
-
-                .md-input
-                  border: 1px solid $color-accent
-                  height: $bs * 5
-
               a
                 color: $color-mat-blue
 
