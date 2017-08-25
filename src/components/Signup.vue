@@ -102,7 +102,7 @@
                   <md-layout md-align="center" md-flex="10" md-flex-offset-xlarge="10">
                     <md-icon :md-src="facebookLogo"></md-icon>
                   </md-layout>
-                  <md-layout md-align="center">
+                  <md-layout md-align="center" class="button-text">
                     <span>Sign up with Facebook</span>
                   </md-layout>
                 </md-layout>
@@ -112,7 +112,7 @@
                   <md-layout md-align="center" md-flex="10" md-flex-offset-xlarge="10">
                     <md-icon :md-src="googlePlusLogo"></md-icon>
                   </md-layout>
-                  <md-layout md-align="center">
+                  <md-layout md-align="center" class="button-text">
                     <span>Sign up with Google</span>
                   </md-layout>
                 </md-layout>
@@ -303,6 +303,11 @@
               font-weight: 400
               border-radius: 0
               text-transform: none
+
+              .button-text
+                @media screen and (max-width: $bp-small) and (min-width: $bp-xsmall)
+                  min-width: 80%
+                  flex: 0 1 80%
 
             .facebook-signup-button
               background-color: #3b5998
