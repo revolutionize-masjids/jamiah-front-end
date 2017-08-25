@@ -1,7 +1,7 @@
 <!-- A button that opens a menu which allows the user to login or sign up -->
 
 <template>
-  <md-menu md-size="4" md-direction="bottom-right" ref="login-menu">
+  <md-menu md-size="6" md-direction="bottom-right" ref="login-menu">
     <md-button md-menu-trigger>
       Login/Signup
     </md-button>
