@@ -223,6 +223,9 @@
       margin: $bs * 8 $bs * 13
       background-color: white
 
+      @media (max-width: $bp-medium)
+        margin: $bs * 6 $bs * 9
+
       @media (max-width: $bp-small)
         margin: 0
         min-height: calc(100vh - #{$nav-toolbar-height})
