@@ -26,7 +26,7 @@
 
 <style lang="sass">
   .google-signup-button
-    background-color: #d34836
+    background-color: #d34836 !important
     &:hover
-      background-color: lighten(#d34836, 10%)
+      background-color: lighten(#d34836, 10%) !important
 </style>

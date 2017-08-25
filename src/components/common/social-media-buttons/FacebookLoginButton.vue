@@ -40,7 +40,7 @@
 
 <style lang="sass">
   .facebook-signup-button
-    background-color: #3b5998
+    background-color: #3b5998 !important
     &:hover
-      background-color: lighten(#3b5998, 10%)
+      background-color: lighten(#3b5998, 10%) !important
 </style>
