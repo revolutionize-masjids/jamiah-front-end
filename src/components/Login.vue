@@ -1,7 +1,7 @@
-<!-- Login to the app or direct user to sign up -->
+<!-- A button that opens a menu which allows the user to login or sign up -->
 
 <template>
-  <md-menu md-size="4" md-direction="bottom-right">
+  <md-menu md-size="4" md-direction="bottom-right" ref="login-menu">
     <md-button md-menu-trigger>
       Login/Signup
     </md-button>
@@ -12,28 +12,35 @@
           <label>Email</label>
           <md-input></md-input>
         </md-input-container>
-        <md-checkbox>
-          Stay signed on
-        </md-checkbox>
+
+        <!-- Save session to local storage -->
+        <md-checkbox>Stay signed on</md-checkbox>
+
         <md-input-container>
           <label>Password</label>
           <md-input></md-input>
         </md-input-container>
+
         <md-button class="md-primary md-raised">
           Log In
         </md-button>
 
         <md-divider></md-divider>
 
+        <!-- Social media login -->
         <md-button class="md-primary md-raised">
           Login with Facebook
         </md-button>
         <md-button class="md-primary md-raised">
           Log in with Google
         </md-button>
+
+        <!-- Redirect user to signup page -->
         <p class="md-caption">
           <span>New User?</span>
-          <router-link to="signup">Sign up!</router-link>
+          <router-link to="signup" @click.native="closeMenu()">
+            Sign up!
+          </router-link>
         </p>
       </md-layout>
     </md-menu-content>
@@ -41,10 +48,28 @@
 </template>
 
 <script>
-  export default {}
+  export default {
+    methods: {
+      closeMenu () {
+        this.$refs['login-menu'].close()
+      }
+    }
+  }
 </script>
 
 <style lang="sass">
   // use global variables
   @import '../styles/variables.sass'
+
+  .login-menu
+    padding: $bs
+    background-color: white
+
+    .md-button
+      width: 100%
+      margin-right: 0
+      margin-left: 0
+
+    .md-caption
+      margin-left: $bs * 2
 </style>

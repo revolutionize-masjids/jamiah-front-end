@@ -104,7 +104,8 @@
       Login
     },
     methods: {
-      // emit an event that indicates to the parent the user wants to open the nav drawer
+      // emit an event that indicates to the parent the user wants to open the
+      // nav drawer
       emitOpenNavDrawerEvent () {
         this.$emit('onOpenNavDrawer')
       }
@@ -120,18 +121,5 @@
     height: $nav-toolbar-height
 
     .text-content
-      // align text content with action buttons
       padding-right: $bs * 3
-
-  .login-menu
-    padding: $bs
-    background-color: white
-
-    .md-button
-      width: 100%
-      margin-right: 0
-      margin-left: 0
-
-    // .md-caption
-    //   margin-left: $bs * 3
 </style>
