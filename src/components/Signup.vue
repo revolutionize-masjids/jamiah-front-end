@@ -98,16 +98,7 @@
               <p class="md-caption">OR</p>
               <p class="md-caption">Log in faster by signing up through your social media account</p>
               <FacebookLoginButton />
-              <md-button class="md-raised google-signup-button social-media-button">
-                <md-layout>
-                  <md-layout md-align="center" md-flex="10" md-flex-offset-xlarge="10">
-                    <md-icon :md-src="googlePlusLogo"></md-icon>
-                  </md-layout>
-                  <md-layout md-align="center" class="button-text">
-                    <span>Sign up with Google</span>
-                  </md-layout>
-                </md-layout>
-              </md-button>
+              <GooglePlusButton />
             </md-layout>
           </md-layout>
         </md-layout>
@@ -120,12 +111,12 @@
   import gql from 'graphql-tag'
 
   import FacebookLoginButton from '@/components/common/social-media-buttons/FacebookLoginButton'
-
-  import googlePlusLogo from '@/assets/icons/google-plus-logo.svg'
+  import GooglePlusButton from '@/components/common/social-media-buttons/GooglePlusButton'
 
   export default {
     components: {
-      FacebookLoginButton
+      FacebookLoginButton,
+      GooglePlusButton
     },
     data: function () {
       return ({
@@ -134,10 +125,7 @@
         lastName: null,
         email: null,
         password: null,
-        confirmPassword: null,
-
-        // assets
-        googlePlusLogo
+        confirmPassword: null
       })
     },
     // define queries
@@ -287,14 +275,4 @@
                 @media screen and (max-width: $bp-small) and (min-width: $bp-xsmall)
                   min-width: 80%
                   flex: 0 1 80%
-
-            .facebook-signup-button
-              background-color: #3b5998
-              &:hover
-                background-color: lighten(#3b5998, 10%)
-
-            .google-signup-button
-              background-color: #d34836
-              &:hover
-                background-color: lighten(#d34836, 10%)
 </style>
