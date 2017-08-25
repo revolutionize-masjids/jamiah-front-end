@@ -70,45 +70,8 @@
         <md-tooltip>Reach out to us!</md-tooltip>
       </md-menu>
 
-      <!-- Signup button that opens a model which you can use to login via social media or custom account -->
-      <!-- <router-link to="signup" class="md-button">Login/Signup</router-link> -->
-      <md-menu md-size="4" md-direction="bottom-right">
-        <md-button md-menu-trigger>
-          Login/Signup
-        </md-button>
-
-        <md-menu-content class="login-menu">
-          <md-layout md-column>
-            <md-input-container>
-              <label>Email</label>
-              <md-input></md-input>
-            </md-input-container>
-            <md-checkbox>
-              Stay signed on
-            </md-checkbox>
-            <md-input-container>
-              <label>Password</label>
-              <md-input></md-input>
-            </md-input-container>
-            <md-button class="md-primary md-raised">
-              Log In
-            </md-button>
-
-            <md-divider></md-divider>
-
-            <md-button class="md-primary md-raised">
-              Login with Facebook
-            </md-button>
-            <md-button class="md-primary md-raised">
-              Log in with Google
-            </md-button>
-            <p class="md-caption">
-              <span>New User?</span>
-              <router-link to="signup">Sign up!</router-link>
-            </p>
-          </md-layout>
-        </md-menu-content>
-      </md-menu>
+      <!-- Login to the app or direct user to sign up -->
+      <Login />
     </div>
 
     <!-- Textual information -->
@@ -134,7 +97,12 @@
 </template>
 
 <script>
+  import Login from '@/components/Login'
+
   export default {
+    components: {
+      Login
+    },
     methods: {
       // emit an event that indicates to the parent the user wants to open the nav drawer
       emitOpenNavDrawerEvent () {
