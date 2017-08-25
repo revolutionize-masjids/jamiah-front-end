@@ -37,10 +37,3 @@
     }
   }
 </script>
-
-<style lang="sass">
-  .facebook-signup-button
-    background-color: #3b5998
-    &:hover
-      background-color: lighten(#3b5998, 10%)
-</style>
