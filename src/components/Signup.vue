@@ -97,7 +97,7 @@
             <md-layout md-align="center" md-vertical-align="center" md-column>
               <p class="md-caption">OR</p>
               <p class="md-caption">Log in faster by signing up through your social media account</p>
-              <FacebookButton />
+              <FacebookLoginButton />
               <GooglePlusButton />
             </md-layout>
           </md-layout>
@@ -110,12 +110,12 @@
 <script>
   import gql from 'graphql-tag'
 
-  import FacebookButton from '@/components/common/social-media-buttons/FacebookButton'
+  import FacebookLoginButton from '@/components/common/social-media-buttons/FacebookLoginButton'
   import GooglePlusButton from '@/components/common/social-media-buttons/GooglePlusButton'
 
   export default {
     components: {
-      FacebookButton,
+      FacebookLoginButton,
       GooglePlusButton
     },
     data: function () {
