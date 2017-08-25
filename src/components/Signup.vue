@@ -202,12 +202,6 @@
           alert('Correct them errors!')
         })
       }
-    },
-    computed: {
-      // see if password is confirmed and valid
-      isPasswordValid: function () {
-        return this.password !== null && this.password === this.confirmPassword
-      }
     }
   }
 </script>
