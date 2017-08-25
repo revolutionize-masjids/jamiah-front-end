@@ -65,6 +65,15 @@
     padding: $bs
     background-color: white
 
+    ul
+      padding: 0
+
+    .md-input-container
+      margin: 0
+
+    .md-checkbox
+      margin: $bs 0 0 $bs * 2
+
     .md-button
       width: 100%
       margin-right: 0
