@@ -1,3 +1,5 @@
+// use and configure VeeValidate package for form validation
+
 import Vue from 'vue'
 import VeeValidate from 'vee-validate'
 

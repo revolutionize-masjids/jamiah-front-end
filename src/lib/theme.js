@@ -1,5 +1,5 @@
-// Global styling. This is where Vue Material is injected into the app.
-// Define app-wide color palette themes here.
+// Use Vue Material to easily bootstrap the front end with components that obey
+// Google Material Design specifications. Register app-wide themes.
 
 import Vue from 'vue'
 import VueMaterial from 'vue-material'

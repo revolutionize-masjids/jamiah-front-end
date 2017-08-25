@@ -1,7 +1,5 @@
-//
-// Use Apollo client to interface with GraphQL API
-// Create an provider that holds Apollo client instances
-//
+// Use the Apollo client to interface with the GraphQL API. See
+// https://github.com/Akryum/vue-apollo to learn more.
 
 import Vue from 'vue'
 import { ApolloClient, createBatchingNetworkInterface } from 'apollo-client'
