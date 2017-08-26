@@ -13,7 +13,7 @@
 </template>
 
 <script>
-  import EventCard from '@/components/EventCard'
+  import EventCard from '@/components/events-page/EventCard'
 
   export default {
     components: {
@@ -24,7 +24,7 @@
 
 <style lang="sass">
   // use global variables
-  @import '../styles/variables.sass'
+  @import '../../styles/variables.sass'
 
   .events-page
     margin: $bs * 2 $bs * 5

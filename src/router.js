@@ -9,7 +9,7 @@ import Router from 'vue-router'
 import Harness from '@/components/Harness'
 import Signup from '@/components/Signup'
 import Home from '@/components/Home'
-import Events from '@/components/Events'
+import Events from '@/components/events-page/Events'
 
 Vue.use(Router)
 

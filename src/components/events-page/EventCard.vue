@@ -100,7 +100,7 @@
 </template>
 
 <script>
-  import Comment from '@/components/Comment'
+  import Comment from '@/components/events-page/Comment'
 
   export default {
     components: {
@@ -111,7 +111,7 @@
 
 <style lang="sass">
   // use global variables
-  @import '../styles/variables.sass'
+  @import '../../styles/variables.sass'
 
   .event-card
     padding: $bs * 5 $bs * 6
