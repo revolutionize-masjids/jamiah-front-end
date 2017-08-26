@@ -1,7 +1,7 @@
 <!-- Card representing an event, its details, and a comment section -->
 
 <template>
-  <md-whiteframe class="event-card">
+  <md-whiteframe md-elevation="10" class="event-card">
     <md-layout md-column>
       <!-- Header -->
       <md-layout class="header">
@@ -130,6 +130,7 @@
     background-color: white
     height: 100%
     width: 100%
+    margin-bottom: $bs * 3
 
     .header
       p
