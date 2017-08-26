@@ -26,6 +26,7 @@
 
         <!-- Action buttons -->
         <md-layout class="action-buttons" md-align="end" md-flex="50">
+          <!-- Share event on social media -->
           <md-layout md-flex="20" md-vertical-align="center" md-column>
             <md-button class="md-icon-button">
               <md-icon>share</md-icon>
@@ -33,6 +34,7 @@
             <p class="md-caption">Share</p>
           </md-layout>
 
+          <!-- Add event to Google Calender -->
           <md-layout md-flex="20" md-vertical-align="center" md-column>
             <md-button class="md-icon-button">
               <md-icon>event</md-icon>
@@ -40,6 +42,7 @@
             <p class="md-caption">Add event to calender</p>
           </md-layout>
 
+          <!-- RSVP -->
           <md-layout md-flex="20" md-vertical-align="center" md-column>
             <md-button class="md-icon-button">
               <md-icon>done</md-icon>
@@ -47,6 +50,7 @@
             <p class="md-caption">Attending</p>
           </md-layout>
 
+          <!-- Like the event -->
           <md-layout md-flex="20" md-vertical-align="center" md-column>
             <md-button class="md-icon-button">
               <md-icon>favorite</md-icon>
@@ -54,13 +58,13 @@
             <p class="md-caption">Like</p>
           </md-layout>
 
+          <!-- Subscribe to  event -->
           <md-layout md-flex="20" md-vertical-align="center" md-column>
             <md-button class="md-icon-button">
               <md-icon>notifications</md-icon>
             </md-button>
             <p class="md-caption">Notifications: On</p>
           </md-layout>
-
         </md-layout>
       </md-layout>
 
@@ -90,7 +94,7 @@
           </md-layout>
         </form>
 
-        <!-- Comments list -->
+        <!-- List of all comments -->
         <md-list class="md-triple-line" v-for="comment in event.comments" :key="comment.id">
           <Comment :comment="comment" />
         </md-list>
@@ -106,6 +110,7 @@
     components: {
       Comment
     },
+    /** the data of the event to display */
     props: ['event'],
     data: function () {
       return ({

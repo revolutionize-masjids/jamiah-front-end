@@ -2,6 +2,7 @@
   <md-layout class="events-page" md-column>
     <h1 class="md-headline">EVENTS</h1>
     <md-layout class="main-content">
+      <!-- List out all events -->
       <md-layout class="event-details" md-flex="60" v-for="event in events" :key="event.id" md-column>
         <EventCard :event="event" />
       </md-layout>
