@@ -1,5 +1,5 @@
 <template>
-  <md-layout md-column>
+  <md-layout class="events-page" md-column>
     <h1 class="md-headline">EVENTS</h1>
     <md-layout class="main-content">
       <md-layout class="event-details" md-flex="60" md-column>
@@ -22,4 +22,10 @@
   }
 </script>
 
-<style lang="sass"></style>
+<style lang="sass">
+  // use global variables
+  @import '../styles/variables.sass'
+
+  .events-page
+    margin: $bs * 2 $bs * 5
+</style>
