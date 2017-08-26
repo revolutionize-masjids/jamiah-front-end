@@ -18,6 +18,12 @@
   export default {
     components: {
       EventCard
+    },
+    data: function () {
+      return ({
+        /** all events to display */
+        events: []
+      })
     }
   }
 </script>
