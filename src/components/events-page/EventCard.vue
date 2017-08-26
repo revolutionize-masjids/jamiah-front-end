@@ -19,7 +19,7 @@
               <p class="md-body-2 week-day">11am - 3pm</p>
             </div>
             <div class="location">
-              <p class="md-body-1 week-day">              <md-icon>place</md-icon> {{ address }}</p>
+              <p class="md-body-1 week-day">              <md-icon>place</md-icon> {{ event.address }}</p>
             </div>
           </md-layout>
         </md-layout>
@@ -66,9 +66,9 @@
 
       <!-- Title & description of event -->
       <md-layout class="event-description" md-column>
-        <h2 class="md-title">{{ name }}</h2>
+        <h2 class="md-title">{{ event.name }}</h2>
         <p class="md-body-1">
-          {{ description }}
+          {{ event.description }}
         </p>
       </md-layout>
 
@@ -91,8 +91,8 @@
         </form>
 
         <!-- Comments list -->
-        <md-list class="md-triple-line">
-          <Comment />
+        <md-list class="md-triple-line" v-for="comment in event.comments" :key="comment.id">
+          <Comment :comment="comment" />
         </md-list>
       </md-layout>
     </md-layout>
@@ -106,28 +106,11 @@
     components: {
       Comment
     },
+    props: ['event'],
     data: function () {
       return ({
-        /** name of the event */
-        name: 'Annual International Art Exhibit',
-        /** event body text */
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-        /** data & time event starts */
-        dateStart: null,
-        /** date & time event ends */
-        dateEnd: null,
-        /** location this event is being held */
-        address: '42-31 Lexington Ave, New York 10000',
-        /** amount of people attending this event */
-        attendees: 0,
-        /** amount of people who liked this event */
-        likes: 0,
-        /** whether current user is subscribed to this event */
-        isNotificationsOn: true,
         /** the text this user is typing to post a comment */
-        newCommentText: '',
-        /** posted comments for this event */
-        comments: []
+        newCommentText: ''
       })
     }
   }

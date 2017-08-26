@@ -5,10 +5,10 @@
     </md-avatar>
 
     <div class="md-list-text-container">
-      <span>{{ name }}</span>
-      <span>Posted {{postedElapsedtime }} days ago</span>
-      <p>{{ comment }}</p>
-      <span><md-icon>favorite</md-icon> {{ likes }}</span>
+      <span>{{ comment.name }}</span>
+      <span>Posted {{ comment.postedElapsedtime }} days ago</span>
+      <p>{{ comment.body }}</p>
+      <span><md-icon>favorite</md-icon> {{ comment.likes }}</span>
     </div>
 
     <md-button class="md-icon-button md-list-action">
@@ -22,12 +22,9 @@
 
 <script>
   export default {
+    props: ['comment'],
     data: function () {
       return ({
-        name: 'Ali Afzar',
-        postedElapsedtime: 3,
-        comment: 'Salaam brothers and sisters! In order to hose this event, we need a total of 12 volunteers. Please click the link above so that we can receive the aid from you. Thanks!',
-        likes: 2,
         didUserLike: true
       })
     }
