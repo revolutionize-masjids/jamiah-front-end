@@ -19,7 +19,7 @@
               <p class="md-body-2 week-day">11am - 3pm</p>
             </div>
             <div class="location">
-              <p class="md-body-1 week-day">              <md-icon>place</md-icon> 42-31 Lexington Ave, New York 10000</p>
+              <p class="md-body-1 week-day">              <md-icon>place</md-icon> {{ address }}</p>
             </div>
           </md-layout>
         </md-layout>
@@ -66,9 +66,9 @@
 
       <!-- Title & description of event -->
       <md-layout class="event-description" md-column>
-        <h2 class="md-title">Annual International Art Exhibit</h2>
+        <h2 class="md-title">{{ name }}</h2>
         <p class="md-body-1">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          {{ description }}
         </p>
       </md-layout>
 
@@ -80,7 +80,7 @@
         <form>
           <md-layout md-column>
             <md-input-container>
-              <md-input placeholder="Post a comment..."></md-input>
+              <md-input placeholder="Post a comment..." v-model="newCommentText"></md-input>
             </md-input-container>
             <md-layout md-align="end">
               <md-button type="submit" class="md-primary md-raised">
@@ -105,6 +105,30 @@
   export default {
     components: {
       Comment
+    },
+    data: function () {
+      return ({
+        /** name of the event */
+        name: 'Annual International Art Exhibit',
+        /** event body text */
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+        /** data & time event starts */
+        dateStart: null,
+        /** date & time event ends */
+        dateEnd: null,
+        /** location this event is being held */
+        address: '42-31 Lexington Ave, New York 10000',
+        /** amount of people attending this event */
+        attendees: 0,
+        /** amount of people who liked this event */
+        likes: 0,
+        /** whether current user is subscribed to this event */
+        isNotificationsOn: true,
+        /** the text this user is typing to post a comment */
+        newCommentText: '',
+        /** posted comments for this event */
+        comments: []
+      })
     }
   }
 </script>
