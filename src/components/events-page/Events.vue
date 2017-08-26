@@ -3,7 +3,7 @@
     <h1 class="md-headline">EVENTS</h1>
     <md-layout class="main-content">
       <!-- List out all events -->
-      <md-layout class="event-details" md-flex="60" v-for="event in events" :key="event.id" md-column>
+      <md-layout class="event-details" md-flex="60" v-for="event in allEvents" :key="event.id" md-column>
         <EventCard :event="event" />
       </md-layout>
       <md-layout class="widgets" md-flex="40" md-column>
@@ -14,8 +14,9 @@
 </template>
 
 <script>
+  import gql from 'graphql-tag'
+
   import EventCard from '@/components/events-page/EventCard'
-  import Events from '@/components/events-page/dummy-data'
 
   export default {
     components: {
@@ -24,8 +25,37 @@
     data: function () {
       return ({
         /** all events to display */
-        events: Events
+        allEvents: null
       })
+    },
+    /** define GraphQL requests & interface with API */
+    apollo: {
+      // fetch all created events and store them in the events property
+      allEvents: gql`
+        query {
+          allEvents {
+            name
+            description
+            address
+            attendees {
+              firstName
+              lastName
+            }
+            likes {
+              firstName
+              lastName
+            }
+            subscribedUsers {
+              firstName
+              lastName
+            }
+            volunteers {
+              firstName
+              lastName
+            }
+          }
+        }
+      `
     }
   }
 </script>
