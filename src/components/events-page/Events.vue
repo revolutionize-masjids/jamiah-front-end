@@ -66,4 +66,8 @@
 
   .events-page
     margin: $bs * 2 $bs * 5
+
+    h1
+      color: $color-primary
+      margin-left: $bs * 2
 </style>
