@@ -9,6 +9,7 @@ import Router from 'vue-router'
 import Harness from '@/components/Harness'
 import Signup from '@/components/Signup'
 import Home from '@/components/Home'
+import Events from '@/components/Events'
 
 Vue.use(Router)
 
@@ -25,6 +26,11 @@ export default new Router({
           path: '/',
           name: 'Home',
           component: Home
+        },
+        {
+          path: 'events',
+          name: 'Events',
+          component: Events
         },
         {
           path: 'signup',
