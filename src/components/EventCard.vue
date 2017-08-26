@@ -180,6 +180,9 @@
 
   .event-card
     padding: $bs * 5 $bs * 6
+    background-color: white
+    height: 100%
+    width: 100%
 
     .header
       p
