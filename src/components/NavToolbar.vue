@@ -17,10 +17,10 @@
       <span style="flex: 1;"></span>
 
       <!-- Button that directs user to the forums -->
-      <md-button>
+      <router-link to="events" class="md-button">
         <span>NEWS & EVENTS</span>
         <md-tooltip>Learn about the latest news and events</md-tooltip>
-      </md-button>
+      </router-link>
 
       <!-- Button that directs user to the forums -->
       <md-button>
