@@ -83,7 +83,7 @@
         <!-- Add a comment -->
         <form>
           <md-layout md-column>
-            <md-input-container>
+            <md-input-container class="md-input-container-box">
               <md-input placeholder="Post a comment..." v-model="newCommentText"></md-input>
             </md-input-container>
             <md-layout md-align="end">

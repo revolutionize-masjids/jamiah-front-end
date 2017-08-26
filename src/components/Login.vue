@@ -8,7 +8,7 @@
 
     <md-menu-content class="login-menu">
       <md-layout md-column>
-        <md-input-container>
+        <md-input-container class="md-input-container-box">
           <label>Email</label>
           <md-input></md-input>
         </md-input-container>
@@ -16,7 +16,7 @@
         <!-- Save session to local storage -->
         <md-checkbox>Stay signed on</md-checkbox>
 
-        <md-input-container>
+        <md-input-container class="md-input-container-box">
           <label>Password</label>
           <md-input></md-input>
         </md-input-container>

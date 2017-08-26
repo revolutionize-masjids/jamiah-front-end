@@ -16,7 +16,7 @@
               <!-- First name -->
               <md-layout md-flex="50">
                 <md-input-container
-                :class="{ 'md-input-invalid': errors.has('firstName') }">
+                :class="{ 'md-input-invalid': errors.has('firstName'), 'md-input-container-box': true }">
                   <label>First Name</label>
                   <md-input v-validate="'required|alpha'" v-model="firstName" type="text" name="firstName" required />
                   <span class="md-error">
@@ -27,7 +27,7 @@
               <!-- Last name -->
               <md-layout md-flex="50">
                 <md-input-container
-                :class="{ 'md-input-invalid': errors.has('lastName') }">
+                :class="{ 'md-input-invalid': errors.has('lastName'), 'md-input-container-box': true }">
                   <label>Last Name</label>
                   <md-input v-validate="'required|alpha'" v-model="lastName" type="text" name="lastName" required />
                   <span class="md-error">
@@ -40,7 +40,7 @@
             <!-- Email -->
             <md-layout class="form-row">
               <md-input-container
-              :class="{ 'md-input-invalid': errors.has('email') }">
+              :class="{ 'md-input-invalid': errors.has('email'), 'md-input-container-box': true }">
                 <label>Email</label>
                 <md-input v-validate="'required|email'" v-model="email" type="email" name="email" required />
                 <span class="md-error">
@@ -55,7 +55,7 @@
               <md-layout md-flex="50">
                 <!-- Password must be alphanumeric characters min 6 chars -->
                 <md-input-container
-                :class="{ 'md-input-invalid': errors.has('password') }">
+                :class="{ 'md-input-invalid': errors.has('password'), 'md-input-container-box': true }">
                   <label>Password</label>
                   <md-input v-validate="'required|alpha_num|min:6'" type="password" v-model="password" name="password" required />
                   <span class="md-error">
@@ -66,7 +66,7 @@
               <!-- Confirm password -->
               <md-layout md-flex="50">
                 <md-input-container
-                :class="{ 'md-input-invalid': errors.has('confirmPassword') }">
+                :class="{ 'md-input-invalid': errors.has('confirmPassword'), 'md-input-container-box': true }">
                   <label>Confirm Password</label>
                   <md-input v-validate="'required|confirmed:password'" type="password" v-model="confirmPassword" name="confirmPassword" required />
                   <span class="md-error">
