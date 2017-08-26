@@ -45,7 +45,7 @@ const events = [
         postedElapsedtime: 2,
         body: 'Yeeeee boi',
         likes: 2,
-        didUserLike: false
+        didUserLike: true
       },
       {
         id: 'fasasad123121123780087sczx21321321sad',
@@ -53,7 +53,7 @@ const events = [
         postedElapsedtime: 5,
         body: 'Going',
         likes: 8,
-        didUserLike: true
+        didUserLike: false
       }
     ]
   }

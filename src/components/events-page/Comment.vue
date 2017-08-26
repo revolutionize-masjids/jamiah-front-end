@@ -12,7 +12,7 @@
     </div>
 
     <md-button class="md-icon-button md-list-action">
-      <md-icon class="md-primary" v-if="didUserLike">favorite</md-icon>
+      <md-icon class="md-primary" v-if="comment.didUserLike">favorite</md-icon>
       <md-icon class="md-primary" v-else>favorite_border</md-icon>
     </md-button>
 
@@ -24,9 +24,7 @@
   export default {
     props: ['comment'],
     data: function () {
-      return ({
-        didUserLike: true
-      })
+      return ({})
     }
   }
 </script>
