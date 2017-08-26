@@ -9,6 +9,11 @@
         <md-icon>menu</md-icon>
       </md-button>
 
+      <!-- Masjid name. Take users back to home page -->
+      <router-link to="/" class="md-title md-button">
+        APP NAME
+      </router-link>
+
       <span style="flex: 1;"></span>
 
       <!-- Button that directs user to the forums -->
@@ -72,26 +77,6 @@
 
       <!-- Login to the app or direct user to sign up -->
       <Login />
-    </div>
-
-    <!-- Textual information -->
-    <div class="md-toolbar-container text-content">
-      <!-- Masjid name. Take users back to home page -->
-      <router-link to="/" class="md-title md-button">
-        East Elmhurst Jam-E Muslim Center
-      </router-link>
-
-      <span style="flex: 1"></span>
-
-      <!-- Masjid address -->
-      <md-icon>place</md-icon>
-      <span>9501 24th Ave, East Elmhurst, NY 11369</span>
-
-      <span style="flex: .25"></span>
-
-      <!-- Masjid phone # -->
-      <md-icon>phone</md-icon>
-      <span>(718) 779-2771</span>
     </div>
   </md-toolbar>
 </template>
