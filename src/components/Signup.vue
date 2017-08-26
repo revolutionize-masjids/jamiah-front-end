@@ -289,6 +289,10 @@
               text-transform: none
 
               .button-text
+                @media screen and (min-width: $bp-large)
+                  min-width: 70%
+                  flex: 0 1 70%
+
                 @media screen and (max-width: $bp-small) and (min-width: $bp-xsmall)
                   min-width: 80%
                   flex: 0 1 80%
