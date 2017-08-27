@@ -6,6 +6,7 @@
       <h2 class="md-headline">Create an event</h2>
     </md-dialog-title>
     <md-dialog-content>
+      <!-- Create the event if form is validated -->
       <form @submit.prevent="createEvent()">
         <md-layout md-column>
           <md-input-container>
@@ -46,26 +47,34 @@
         this.$refs.dialog.open()
       },
       /** send a request to the API to create an event */
-      createEvent () {
-        this.$apollo.mutate({
-          // define the mutation using GraphQL query syntax
-          mutation: gql`
-            mutation CreateAnEvent($eventName: String!, $eventDescription: String!, $eventAddress: String!) {
-              createEvent(name: $eventName, description: $eventDescription, address: $eventAddress) {
-                _id
-                name
-                description
-                address
+      async createEvent () {
+        try {
+          await this.$apollo.mutate({
+            // define the mutation using GraphQL query syntax
+            mutation: gql`
+              mutation CreateAnEvent($eventName: String!, $eventDescription: String!, $eventAddress: String!) {
+                createEvent(name: $eventName, description: $eventDescription, address: $eventAddress) {
+                  _id
+                  name
+                  description
+                  address
+                }
               }
+            `,
+            // define the parameters for the mutation
+            variables: {
+              eventName: this.eventName,
+              eventDescription: this.eventDescription,
+              eventAddress: this.eventAddress
             }
-          `,
-          // define the parameters for the mutation
-          variables: {
-            eventName: this.eventName,
-            eventDescription: this.eventDescription,
-            eventAddress: this.eventAddress
-          }
-        })
+          })
+
+          // handle successful creation of an event
+          this.$emit('eventCreated')
+        } catch (error) {
+          // handle errors
+          console.log(error)
+        }
       }
     }
   }
