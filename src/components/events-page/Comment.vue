@@ -28,7 +28,7 @@
   export default {
     props: ['comment'],
     computed: {
-      // get the time elapsed since comment was made
+      /** get the time elapsed since comment was made */
       timeSincePosted: function () {
         return moment(this.comment.created, 'ms').fromNow()
       }

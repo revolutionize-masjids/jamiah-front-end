@@ -52,6 +52,18 @@
     methods: {
       closeMenu () {
         this.$refs['login-menu'].close()
+      },
+      /** authenticate user and login */
+      async login () {
+        try {
+          // try authenticating
+
+          // handle success
+          // let app know that user logged in
+          this.$store.commit('login')
+        } catch (error) {
+          // handle errors
+        }
       }
     }
   }
