@@ -20,7 +20,7 @@
     </md-layout>
 
     <!-- Dialog to create an event -->
-    <OpenCreateEventDialog ref="create-event-dialog" />
+    <OpenCreateEventDialog ref="create-event-dialog" @eventCreated="reload()" />
   </md-layout>
 </template>
 
@@ -42,8 +42,13 @@
       })
     },
     methods: {
+      /** open a dialog that lets users create events */
       openCreateEventDialog () {
         this.$refs['create-event-dialog'].open()
+      },
+      /** update the view with fresh data */
+      reload () {
+        // update the view when an event is created with new data
       }
     },
     /** define GraphQL requests & interface with API */
