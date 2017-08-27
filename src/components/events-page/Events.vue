@@ -76,6 +76,22 @@
               firstName
               lastName
             }
+            comments {
+              body
+              commenter {
+                firstName
+                lastName
+                avatar {
+                  imageUrl
+                }
+              }
+              created
+              lastUpdated
+              likes {
+                firstName
+                lastName
+              }
+            }
           }
         }
       `
