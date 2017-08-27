@@ -129,11 +129,11 @@
           mutation: gql`
             mutation addCommentToEvent($eventId: ID!, $body: String!){
               addCommentToEvent(eventId: $eventId, body: $body) {
-                _id
-                name
-                comments {
-                  body
-                }
+                body
+                commenter
+                created
+                lastUpdated
+                likes
               }
             }
           `,
@@ -143,6 +143,9 @@
             eventId: this.event['_id']
           }
         })
+
+        // reset input
+        this.newCommentText = ''
       }
     }
   }
