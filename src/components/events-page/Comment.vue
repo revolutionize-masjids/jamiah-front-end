@@ -10,7 +10,7 @@
       </span>
       <span>Posted {{ timeSincePosted }}</span>
       <p>{{ comment.body }}</p>
-      <span><md-icon>favorite</md-icon> {{ comment.likes }}</span>
+      <span><md-icon>favorite</md-icon> {{ comment.likes.length }}</span>
     </div>
 
     <md-button class="md-icon-button md-list-action">
