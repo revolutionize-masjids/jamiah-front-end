@@ -71,6 +71,7 @@
 
           // handle successful creation of an event
           this.$emit('eventCreated')
+          this.$refs.dialog.close()
         } catch (error) {
           // handle errors
           console.log(error)
