@@ -5,7 +5,7 @@
     </md-avatar>
 
     <div class="md-list-text-container">
-      <span>{{ comment.name }}</span>
+      <span>{{ `${comment.commenter.firstName} ${comment.commenter.lastName}` }}</span>
       <span>Posted {{ comment.postedElapsedtime }} days ago</span>
       <p>{{ comment.body }}</p>
       <span><md-icon>favorite</md-icon> {{ comment.likes }}</span>
