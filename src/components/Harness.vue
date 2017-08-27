@@ -24,6 +24,12 @@
       NavDrawer,
       NavToolbar
     },
+    computed: {
+      /** whether the user is logged in */
+      isLoggedIn () {
+        return this.$store.state.isLoggedIn
+      }
+    },
     // component methods
     methods: {
       // handle opening the navigation drawer on the left
