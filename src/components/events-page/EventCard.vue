@@ -122,30 +122,35 @@
     },
     methods: {
       /** post a comment to this event */
-      addComment () {
-        // define the mutation query
-        this.$apollo.mutate({
-          // query
-          mutation: gql`
-            mutation addCommentToEvent($eventId: ID!, $body: String!){
-              addCommentToEvent(eventId: $eventId, body: $body) {
-                body
-                commenter
-                created
-                lastUpdated
-                likes
+      async addComment () {
+        try {
+          // define the mutation query
+          this.$apollo.mutate({
+            // query
+            mutation: gql`
+              mutation addCommentToEvent($eventId: ID!, $body: String!){
+                addCommentToEvent(eventId: $eventId, body: $body) {
+                  body
+                  commenter
+                  created
+                  lastUpdated
+                  likes
+                }
               }
+            `,
+            // parameters
+            variables: {
+              body: this.newCommentText,
+              eventId: this.event['_id']
             }
-          `,
-          // parameters
-          variables: {
-            body: this.newCommentText,
-            eventId: this.event['_id']
-          }
-        })
-
-        // reset input
-        this.newCommentText = ''
+          })
+          // handle success
+          // reset input
+          this.newCommentText = ''
+        } catch (error) {
+          // handle errors
+          console.log(`failed to add comment: ${error}`)
+        }
       }
     }
   }
