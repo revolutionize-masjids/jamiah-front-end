@@ -185,6 +185,8 @@
         try {
           await this.$auth.authenticate(provider)
           // Execute application logic after successful social authentication
+          // let app know the user logged in
+          this.$store.commit('login')
           console.log('successfully authenticated')
         } catch (error) {
           console.log('error authenticating', error)
