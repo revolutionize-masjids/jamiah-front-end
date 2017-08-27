@@ -5,8 +5,10 @@
     </md-avatar>
 
     <div class="md-list-text-container">
-      <span>{{ `${comment.commenter.firstName} ${comment.commenter.lastName}` }}</span>
-      <span>Posted {{ comment.postedElapsedtime }} days ago</span>
+      <span>
+        {{ `${comment.commenter.firstName} ${comment.commenter.lastName}` }}
+      </span>
+      <span>Posted {{ timeSincePosted }}</span>
       <p>{{ comment.body }}</p>
       <span><md-icon>favorite</md-icon> {{ comment.likes }}</span>
     </div>
@@ -21,10 +23,18 @@
 </template>
 
 <script>
+  import moment from 'moment'
+
   export default {
     props: ['comment'],
     data: function () {
       return ({})
+    },
+    computed: {
+      // get the time elapsed since comment was made
+      timeSincePosted: function () {
+        return moment(this.comment.created, 'ms').fromNow()
+      }
     }
   }
 </script>
