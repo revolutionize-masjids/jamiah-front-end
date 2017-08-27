@@ -128,7 +128,7 @@
           // query
           mutation: gql`
             mutation addCommentToEvent($eventId: ID!, $body: String!){
-              addCommentToEvent(_id: $eventId, body: $body) {
+              addCommentToEvent(eventId: $eventId, body: $body) {
                 _id
                 name
                 comments {
