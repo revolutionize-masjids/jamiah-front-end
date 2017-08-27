@@ -1,6 +1,14 @@
 <template>
   <md-layout class="events-page" md-column>
-    <h1 class="md-headline">EVENTS</h1>
+    <md-layout class="header">
+      <h1 class="md-headline">EVENTS</h1>
+      <md-layout md-align="end">
+        <md-button class="md-fab" @click.native="openCreateEventDialog()">
+          <md-icon>edit</md-icon>
+        </md-button>
+      </md-layout>
+    </md-layout>
+
     <md-layout class="main-content">
       <!-- List out all events -->
       <md-layout class="event-details" md-flex="60" v-for="event in allEvents" :key="event.id" md-column>
@@ -10,6 +18,9 @@
         <md-whiteframe></md-whiteframe>
       </md-layout>
     </md-layout>
+
+    <!-- Dialog to create an event -->
+    <OpenCreateEventDialog ref="create-event-dialog" />
   </md-layout>
 </template>
 
@@ -17,16 +28,23 @@
   import gql from 'graphql-tag'
 
   import EventCard from '@/components/events-page/EventCard'
+  import OpenCreateEventDialog from '@/components/events-page/OpenCreateEventDialog'
 
   export default {
     components: {
-      EventCard
+      EventCard,
+      OpenCreateEventDialog
     },
     data: function () {
       return ({
         /** all events to display */
         allEvents: null
       })
+    },
+    methods: {
+      openCreateEventDialog () {
+        this.$refs['create-event-dialog'].open()
+      }
     },
     /** define GraphQL requests & interface with API */
     apollo: {
