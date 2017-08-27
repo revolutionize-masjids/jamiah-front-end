@@ -10,6 +10,7 @@ import apolloProvider from '@/lib/apollo'
 import '@/lib/theme'
 import '@/lib/resource'
 import '@/lib/vee-validate'
+import '@/lib/vuex'
 
 Vue.config.productionTip = false
 
