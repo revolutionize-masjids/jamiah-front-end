@@ -77,6 +77,7 @@
               firstName
               lastName
             }
+            # get comments for the comment section of the event card
             comments {
               body
               commenter {

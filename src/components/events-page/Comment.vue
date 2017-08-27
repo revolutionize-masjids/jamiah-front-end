@@ -27,9 +27,6 @@
 
   export default {
     props: ['comment'],
-    data: function () {
-      return ({})
-    },
     computed: {
       // get the time elapsed since comment was made
       timeSincePosted: function () {
