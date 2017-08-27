@@ -7,10 +7,10 @@ import Vue from 'vue'
 import App from '@/App'
 import router from '@/router'
 import apolloProvider from '@/lib/apollo'
+import store from '@/lib/vuex'
 import '@/lib/theme'
 import '@/lib/resource'
 import '@/lib/vee-validate'
-import '@/lib/vuex'
 
 Vue.config.productionTip = false
 
@@ -20,6 +20,8 @@ new Vue({
   el: '#app',
   router,
   apolloProvider,
+  // inject the Vuex store into all child components
+  store,
   template: '<App/>',
   components: { App }
 })

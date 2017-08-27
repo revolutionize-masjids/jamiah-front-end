@@ -13,7 +13,7 @@ const store = new Vuex.Store({
     isLoggedIn: false
   },
   mutations: {
-    // toggle whether the user is logged in or not
+    /** toggle whether the user is logged in or not */
     toggleSession (state) {
       state.isLoggedIn = !state.isLoggedIn
     }
