@@ -57,6 +57,7 @@
       allEvents: gql`
         query {
           allEvents {
+            _id
             name
             description
             address

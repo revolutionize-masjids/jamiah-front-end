@@ -81,7 +81,7 @@
         <h2 class="md-title">Comments</h2>
 
         <!-- Add a comment -->
-        <form>
+        <form @submit.prevent="addComment()">
           <md-layout md-column>
             <md-input-container class="md-input-container-box">
               <md-input placeholder="Post a comment..." v-model="newCommentText"></md-input>
@@ -104,6 +104,8 @@
 </template>
 
 <script>
+  import gql from 'graphql-tag'
+
   import Comment from '@/components/events-page/Comment'
 
   export default {
@@ -117,6 +119,31 @@
         /** the text this user is typing to post a comment */
         newCommentText: ''
       })
+    },
+    methods: {
+      /** post a comment to this event */
+      addComment () {
+        // define the mutation query
+        this.$apollo.mutate({
+          // query
+          mutation: gql`
+            mutation addCommentToEvent($eventId: ID!, $body: String!){
+              addCommentToEvent(_id: $eventId, body: $body) {
+                _id
+                name
+                comments {
+                  body
+                }
+              }
+            }
+          `,
+          // parameters
+          variables: {
+            body: this.newCommentText,
+            eventId: this.event['_id']
+          }
+        })
+      }
     }
   }
 </script>
