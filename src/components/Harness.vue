@@ -17,18 +17,12 @@
 
 <script>
   import NavDrawer from '@/components/NavDrawer'
-  import NavToolbar from '@/components/NavToolbar'
+  import NavToolbar from '@/components/nav-toolbar/NavToolbar'
 
   export default {
     components: {
       NavDrawer,
       NavToolbar
-    },
-    computed: {
-      /** whether the user is logged in */
-      isLoggedIn () {
-        return this.$store.state.isLoggedIn
-      }
     },
     // component methods
     methods: {

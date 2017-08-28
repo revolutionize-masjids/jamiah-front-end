@@ -76,7 +76,11 @@
       </md-menu>
 
       <!-- Login to the app or direct user to sign up -->
-      <Login />
+      <Login v-if="!isLoggedIn"/>
+      <!-- Button that directs user to the forums -->
+      <md-button @click.native="logout()" v-else>
+        Logout
+      </md-button>
     </div>
   </md-toolbar>
 </template>
@@ -88,11 +92,22 @@
     components: {
       Login
     },
+    computed: {
+      /** whether the user is logged in */
+      isLoggedIn () {
+        return this.$store.state.isLoggedIn
+      }
+    },
     methods: {
       // emit an event that indicates to the parent the user wants to open the
       // nav drawer
       emitOpenNavDrawerEvent () {
         this.$emit('onOpenNavDrawer')
+      },
+      /** log out the user */
+      logout () {
+        // ask the user if he's sure he wants to logout
+        this.$refs['logout-confirmation-prompt'].open()
       }
     }
   }
@@ -100,7 +115,7 @@
 
 <style lang="sass">
   // use global variables
-  @import '../styles/variables.sass'
+  @import '../../styles/variables.sass'
 
   .nav-toolbar
     height: $nav-toolbar-height
