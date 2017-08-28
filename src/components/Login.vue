@@ -9,9 +9,12 @@
     <md-menu-content class="login-menu">
       <form @submit.prevent="login()">
         <md-layout md-column>
-          <md-input-container class="md-input-container-box">
-            <label>Email</label>
-            <md-input v-model="emailInput"></md-input>
+          <md-input-container :class="{ 'md-input-container-box': true, 'md-input-invalid': errors.has('email') }">
+            <label for="email">Email</label>
+            <md-input v-validate="'required|email'" v-model="emailInput" name="email" required></md-input>
+            <span class="md-error" v-show="errors.has('email')">
+              {{ errors.first('email') }}
+            </span>
           </md-input-container>
 
           <!-- Save session to local storage -->
