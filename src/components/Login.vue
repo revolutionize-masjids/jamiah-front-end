@@ -76,6 +76,9 @@
       /** authenticate user and login */
       async login () {
         try {
+          // see if form inputs are valid
+          await this.$validator.validateAll()
+  
           // try authenticating
 
           // handle success
