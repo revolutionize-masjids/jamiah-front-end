@@ -7,6 +7,7 @@
     </md-button>
 
     <md-menu-content class="login-menu">
+      <!-- Login form that validates user credentials before authenticating -->
       <form @submit.prevent="login()">
         <md-layout md-column>
           <md-input-container :class="{ 'md-input-container-box': true, 'md-input-invalid': errors.has('email') }">
@@ -22,7 +23,7 @@
 
           <md-input-container :class="{ 'md-input-container-box': true, 'md-input-invalid': errors.has('password') }">
             <label>Password</label>
-            <md-input v-model="passwordInput" v-validate="'required|alpha_num|min:6'" name="password" type="password" required></md-input>
+            <md-input v-model="passwordInput" v-validate="'required|alpha_dash|min:6'" name="password" type="password" required></md-input>
             <span class="md-error">
               {{ errors.first('password') }}
             </span>
@@ -68,6 +69,7 @@
       })
     },
     methods: {
+      /** close the login component for whatever reason */
       closeMenu () {
         this.$refs['login-menu'].close()
       },

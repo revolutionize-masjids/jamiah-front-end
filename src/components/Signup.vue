@@ -57,7 +57,7 @@
                 <md-input-container
                 :class="{ 'md-input-invalid': errors.has('password'), 'md-input-container-box': true }">
                   <label>Password</label>
-                  <md-input v-validate="'required|alpha_num|min:6'" type="password" v-model="password" name="password" required />
+                  <md-input v-validate="'required|alpha_dash|min:6'" type="password" v-model="password" name="password" required />
                   <span class="md-error">
                     {{ errors.first('password') }}
                   </span>
