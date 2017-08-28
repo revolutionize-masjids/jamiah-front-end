@@ -11,7 +11,16 @@ Vue.use(Vuex)
 const store = new Vuex.Store({
   state: {
     /** whether user is logged in or not */
-    isLoggedIn: false
+    isLoggedIn: false,
+    /** general user information */
+    user: {
+      userId: null,
+      firstName: null,
+      lastName: null,
+      email: null,
+      /** profile picture */
+      avatar: null
+    }
   },
   mutations: {
     /** update app state to reflect that user logged in */
