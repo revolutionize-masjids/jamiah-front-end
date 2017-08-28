@@ -35,10 +35,10 @@
           <md-divider></md-divider>
 
           <!-- Social media login -->
-          <md-button class="md-primary md-raised" type="submit">
+          <md-button class="md-primary md-raised">
             Login with Facebook
           </md-button>
-          <md-button class="md-primary md-raised" type="submit">
+          <md-button class="md-primary md-raised">
             Log in with Google
           </md-button>
 
