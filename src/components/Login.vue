@@ -11,7 +11,7 @@
         <md-layout md-column>
           <md-input-container :class="{ 'md-input-container-box': true, 'md-input-invalid': errors.has('email') }">
             <label for="email">Email</label>
-            <md-input v-validate="'required|email'" v-model="emailInput" name="email" required></md-input>
+            <md-input v-model="emailInput" v-validate="'required|email'" name="email" required></md-input>
             <span class="md-error" v-show="errors.has('email')">
               {{ errors.first('email') }}
             </span>
@@ -20,9 +20,12 @@
           <!-- Save session to local storage -->
           <md-checkbox>Stay signed on</md-checkbox>
 
-          <md-input-container class="md-input-container-box">
+          <md-input-container :class="{ 'md-input-container-box': true, 'md-input-invalid': errors.has('password') }">
             <label>Password</label>
-            <md-input v-model="passwordInput"></md-input>
+            <md-input v-model="passwordInput" v-validate="'required|alpha_num|min:6'" name="password" type="password" required></md-input>
+            <span class="md-error">
+              {{ errors.first('password') }}
+            </span>
           </md-input-container>
 
           <md-button class="md-primary md-raised" type="submit">
