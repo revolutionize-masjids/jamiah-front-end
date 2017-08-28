@@ -106,8 +106,7 @@
       },
       /** log out the user */
       logout () {
-        // ask the user if he's sure he wants to logout
-        this.$refs['logout-confirmation-prompt'].open()
+        this.$store.commit('logout')
       }
     }
   }
