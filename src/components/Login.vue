@@ -7,42 +7,44 @@
     </md-button>
 
     <md-menu-content class="login-menu">
-      <md-layout md-column>
-        <md-input-container class="md-input-container-box">
-          <label>Email</label>
-          <md-input></md-input>
-        </md-input-container>
+      <form @submit.prevent="login()">
+        <md-layout md-column>
+          <md-input-container class="md-input-container-box">
+            <label>Email</label>
+            <md-input></md-input>
+          </md-input-container>
 
-        <!-- Save session to local storage -->
-        <md-checkbox>Stay signed on</md-checkbox>
+          <!-- Save session to local storage -->
+          <md-checkbox>Stay signed on</md-checkbox>
 
-        <md-input-container class="md-input-container-box">
-          <label>Password</label>
-          <md-input></md-input>
-        </md-input-container>
+          <md-input-container class="md-input-container-box">
+            <label>Password</label>
+            <md-input></md-input>
+          </md-input-container>
 
-        <md-button class="md-primary md-raised">
-          Log In
-        </md-button>
+          <md-button class="md-primary md-raised" type="submit">
+            Log In
+          </md-button>
 
-        <md-divider></md-divider>
+          <md-divider></md-divider>
 
-        <!-- Social media login -->
-        <md-button class="md-primary md-raised">
-          Login with Facebook
-        </md-button>
-        <md-button class="md-primary md-raised">
-          Log in with Google
-        </md-button>
+          <!-- Social media login -->
+          <md-button class="md-primary md-raised" type="submit">
+            Login with Facebook
+          </md-button>
+          <md-button class="md-primary md-raised" type="submit">
+            Log in with Google
+          </md-button>
 
-        <!-- Redirect user to signup page -->
-        <p class="md-caption">
-          <span>New User?</span>
-          <router-link to="signup" @click.native="closeMenu()">
-            Sign up!
-          </router-link>
-        </p>
-      </md-layout>
+          <!-- Redirect user to signup page -->
+          <p class="md-caption">
+            <span>New User?</span>
+            <router-link to="signup" @click.native="closeMenu()">
+              Sign up!
+            </router-link>
+          </p>
+        </md-layout>
+      </form>
     </md-menu-content>
   </md-menu>
 </template>
@@ -63,6 +65,7 @@
           this.$store.commit('login')
         } catch (error) {
           // handle errors
+          console.log(`failed to authenticate & login: ${error}`)
         }
       }
     }
