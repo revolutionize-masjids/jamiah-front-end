@@ -11,6 +11,7 @@ import store from '@/lib/vuex'
 import '@/lib/theme'
 import '@/lib/resource'
 import '@/lib/vee-validate'
+import '@/lib/vuetify'
 
 Vue.config.productionTip = false
 
