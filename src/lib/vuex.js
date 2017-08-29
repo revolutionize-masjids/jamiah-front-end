@@ -24,8 +24,9 @@ const store = new Vuex.Store({
   },
   mutations: {
     /** update app state to reflect that user logged in */
-    login (state) {
+    login (state, payload) {
       state.isLoggedIn = true
+      state.user = payload
     },
     /** update app state to reflect that user logged out */
     logout (state) {
