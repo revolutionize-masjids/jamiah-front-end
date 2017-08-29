@@ -19,7 +19,9 @@
           </md-input-container>
 
           <!-- Save session to local storage -->
-          <md-checkbox>Stay signed on</md-checkbox>
+          <md-checkbox v-model="shouldRemainSignedIn">
+            Stay signed on
+          </md-checkbox>
 
           <md-input-container :class="{ 'md-input-container-box': true, 'md-input-invalid': errors.has('password') }">
             <label>Password</label>
@@ -63,7 +65,9 @@
         /** the value for the email input in the login form */
         emailInput: null,
         /** the value for the password input in the login form */
-        passwordInput: null
+        passwordInput: null,
+        /** whether the user wants to remain signed in */
+        shouldRemainSignedIn: false
       })
     },
     methods: {
