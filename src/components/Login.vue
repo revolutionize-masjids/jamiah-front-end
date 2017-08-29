@@ -57,8 +57,6 @@
 </template>
 
 <script>
-  import gql from 'graphql-tag'
-
   export default {
     data: function () {
       return ({
@@ -78,7 +76,7 @@
         try {
           // see if form inputs are valid
           await this.$validator.validateAll()
-  
+
           // try authenticating
 
           // handle success
@@ -87,26 +85,6 @@
         } catch (error) {
           // handle errors
           console.log(`failed to authenticate & login: ${error}`)
-        }
-      }
-    },
-    apollo: {
-      /** verify login by fetching a user in the database that matches the credentials input by the user */
-      user: {
-        query: gql`
-          query GetUserFromInput($email: String!) {
-            # get the user via email and verify via email & password
-            user(email: $email) {
-              email
-              password
-            }
-          }
-        `,
-        /** parameters for the query to confirm login credentials match */
-        variables () {
-          return {
-            email: this.emailInput
-          }
         }
       }
     }
