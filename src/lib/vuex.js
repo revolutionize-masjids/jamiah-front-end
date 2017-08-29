@@ -20,7 +20,8 @@ const store = new Vuex.Store({
       email: null,
       /** profile picture */
       avatar: null
-    }
+    },
+    areLoginCredentialsValid: false
   },
   mutations: {
     /** update app state to reflect that user logged in */
@@ -30,6 +31,9 @@ const store = new Vuex.Store({
     /** update app state to reflect that user logged out */
     logout (state) {
       state.isLoggedIn = false
+    },
+    setAreLoginCredentialsValid (state, payload) {
+      state.areLoginCredentialsValid = payload
     }
   }
 })

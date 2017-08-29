@@ -68,6 +68,11 @@
         passwordInput: null
       })
     },
+    computed: {
+      areLoginCredentialsValid () {
+        return this.$store.state.areLoginCredentialsValid
+      }
+    },
     methods: {
       /** close the login component for whatever reason */
       closeMenu () {
@@ -77,8 +82,10 @@
       async login () {
         try {
           // see if form inputs are valid
-          await this.$validator.validateAll()
-  
+          this.$store.commit('setAreLoginCredentialsValid', await this.$validator.validateAll())
+
+          this.$apollo.queries.user.refetch()
+
           // try authenticating
 
           // handle success
@@ -107,6 +114,9 @@
           return {
             email: this.emailInput
           }
+        },
+        skip () {
+          return !this.areLoginCredentialsValid
         }
       }
     }
