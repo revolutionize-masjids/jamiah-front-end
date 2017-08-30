@@ -13,6 +13,8 @@ const store = new Vuex.Store({
   state: {
     /** whether user is logged in or not */
     isLoggedIn: false,
+    /** whether the login/signup dialog is open */
+    isLoginDialogOpen: false,
     /** general user information */
     user: {
       userId: null,
@@ -32,6 +34,10 @@ const store = new Vuex.Store({
     /** update app state to reflect that user logged out */
     logout (state) {
       state.isLoggedIn = false
+    },
+    /** open or close the login/signup dialog */
+    setIsLoginDialogOpen (state, payload) {
+      state.isLoginDialogOpen = payload
     }
   }
 })

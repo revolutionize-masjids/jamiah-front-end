@@ -89,19 +89,21 @@
     <!-- Mobile action buttons -->
     <v-toolbar-items>
       <!-- Login to the app or direct user to sign up -->
-      <v-btn class="white--text" v-if="!isLoggedIn" slot="activator" v-tooltip:bottom="{ html: 'Log in to the app' }" flat>
-        Login / Signup
-      </v-btn>
+      <Login v-if="!isLoggedIn" />
       <!-- Logout of the app and redirect to homepage -->
       <v-btn v-else @click.native="logout()" class="white--text" v-tooltip:bottom="{ html: 'Log out of the app' }" flat>
         Logout
+      </v-btn>
+
+      <v-btn icon>
+        <v-icon class="white--text">search</v-icon>
       </v-btn>
     </v-toolbar-items>
   </v-toolbar>
 </template>
 
 <script>
-  import Login from '@/components/Login'
+  import Login from '@/components/nav-toolbar/Login'
 
   export default {
     components: {
