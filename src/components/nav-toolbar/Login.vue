@@ -94,8 +94,15 @@
           // try authenticating
 
           // handle success
-          // let app know that user logged in
-          this.$store.commit('login')
+          // let app know that user logged in and store user cache
+          this.$store.commit('login', {
+            userId: null,
+            firstName: null,
+            lastName: null,
+            email: this.emailInput,
+            /** profile picture */
+            avatar: null
+          })
         } catch (error) {
           // handle errors
           console.log(`failed to authenticate & login: ${error}`)
