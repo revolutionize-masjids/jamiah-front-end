@@ -1,12 +1,12 @@
 <!-- A button that opens a menu which allows the user to login or sign up -->
 
 <template>
-  <md-menu md-size="6" md-direction="bottom-right" ref="login-menu" md-offset-y="50">
-    <md-button md-menu-trigger>
-      Login/Signup
-    </md-button>
+  <v-menu ref="login-menu" offset-x offset-y bottom>
+    <v-btn class="white--text" slot="activator" v-tooltip:bottom="{ html: 'Login to the app' }" flat>
+      Login
+    </v-btn>
 
-    <md-menu-content class="login-menu">
+    <v-menu-content class="login-menu">
       <!-- Login form that validates user credentials before authenticating -->
       <form @submit.prevent="login()">
         <md-layout md-column>
@@ -31,19 +31,19 @@
             </span>
           </md-input-container>
 
-          <md-button class="md-primary md-raised" type="submit">
+          <v-btn class="md-primary md-raised" type="submit">
             Log In
-          </md-button>
+          </v-btn>
 
           <md-divider></md-divider>
 
           <!-- Social media login -->
-          <md-button class="md-primary md-raised">
+          <v-btn class="md-primary md-raised">
             Login with Facebook
-          </md-button>
-          <md-button class="md-primary md-raised">
+          </v-btn>
+          <v-btn class="md-primary md-raised">
             Log in with Google
-          </md-button>
+          </v-btn>
 
           <!-- Redirect user to signup page -->
           <p class="md-caption">
@@ -54,8 +54,8 @@
           </p>
         </md-layout>
       </form>
-    </md-menu-content>
-  </md-menu>
+    </v-menu-content>
+  </v-menu>
 </template>
 
 <script>
@@ -112,7 +112,7 @@
     .md-checkbox
       margin: $bs 0 0 $bs * 2
 
-    .md-button
+    .v-btn
       width: 100%
       margin-right: 0
       margin-left: 0
