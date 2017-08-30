@@ -1,5 +1,6 @@
 /**
- * Configuration and installation of the Vuetify material ui toolkit
+ * Configuration and installation of the Vuetify material ui toolkit. To learn
+ * more: https://vuetifyjs.com
  */
 
 import Vue from 'vue'

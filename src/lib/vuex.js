@@ -1,5 +1,6 @@
 /**
- * Install the Vuex state management pattern + library into the application
+ * Install the Vuex state management pattern + library into the application.
+ * To learn more: https://vuex.vuejs.org
  */
 
 import Vue from 'vue'
