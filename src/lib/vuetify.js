@@ -6,8 +6,8 @@
 import Vue from 'vue'
 import Vuetify from 'vuetify'
 
+// Use the css-loader
+import '../../node_modules/vuetify/dist/vuetify.min.css'
+
 // install Vuetify
 Vue.use(Vuetify)
-
-// Use the css-loader
-import('../../node_modules/vuetify/dist/vuetify.min.css')
