@@ -2,7 +2,7 @@
 <!-- Contains anything that should be displayed in EVERY page -->
 
 <template>
-  <div>
+  <v-app>
     <!-- Top navigation bar that contains title and essential buttons and info. Logging in, signing up, account info, open drawer button, etc. -->
     <!-- Listen for the open nav drawer event -->
     <NavToolbar @onOpenNavDrawer="openNavDrawer()" />
@@ -10,9 +10,13 @@
     <!-- App-wide navigation drawer (sidebar) that slides from the left of the screen -->
     <NavDrawer ref="navDrawer" />
 
-    <!-- All content components will be rendered here (such as home) -->
-    <router-view></router-view>
-  </div>
+    <main>
+      <v-container fluid>
+        <!-- All content components will be rendered here (such as home) -->
+        <router-view></router-view>
+      </v-container>
+    </main>
+  </v-app>
 </template>
 
 <script>

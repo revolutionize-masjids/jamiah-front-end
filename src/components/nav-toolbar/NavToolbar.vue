@@ -1,88 +1,97 @@
-<!-- The top navigation toolbar connected to the app harness. Contains essential navigation and action controls. -->
+<!-- The top navigation toolbar connected to the app harness. Contains essential navigation and action controls -->
 
 <template>
-  <md-toolbar class="md-dense md-primary nav-toolbar">
-    <!-- Action buttons -->
-    <div class="md-toolbar-container action-buttons">
-      <!-- Hamburger menu that opens the navigation drawer -->
-      <md-button class="md-icon-button" @click.native="emitOpenNavDrawerEvent()">
-        <md-icon>menu</md-icon>
-      </md-button>
+  <v-toolbar class="teal" dense>
+    <!-- Hamburger menu that open the navigation drawer -->
+    <v-toolbar-side-icon class="white--text" @click.native="emitOpenNavDrawerEvent()"></v-toolbar-side-icon>
 
-      <!-- Masjid name. Take users back to home page -->
-      <router-link to="/" class="md-title md-button">
-        APP NAME
-      </router-link>
+    <!-- The name of the application. Click to go to homepage -->
+    <router-link :to="{ name: 'Home' }">
+      <v-toolbar-title class="white--text">APP NAME</v-toolbar-title>
+    </router-link>
 
-      <span style="flex: 1;"></span>
+    <v-spacer></v-spacer>
 
-      <!-- Button that directs user to the forums -->
-      <router-link to="events" class="md-button">
-        <span>NEWS & EVENTS</span>
-        <md-tooltip>Learn about the latest news and events</md-tooltip>
-      </router-link>
+    <v-toolbar-items class="hidden-sm-and-down">
+      <v-btn class="white--text" :to="{ name: 'Events' }" v-tooltip:bottom="{ html: 'Learn about the latest news and events' }" flat>
+        News & Events
+      </v-btn>
 
-      <!-- Button that directs user to the forums -->
-      <md-button>
-        <span>Forums</span>
-        <md-tooltip>Discuss with the community</md-tooltip>
-      </md-button>
+      <!-- Button that takes user to forums -->
+      <v-btn class="white--text" v-tooltip:bottom="{ html: 'Discuss with the community' }" flat>
+        Forums
+      </v-btn>
 
-      <!-- Button that directs user to the "Learn about Islam" page -->
-      <md-button>
-        <span>Learn Islam</span>
-        <md-tooltip>Learn about Islam!</md-tooltip>
-      </md-button>
+      <!-- Button that directs user to learn more about Islam -->
+      <v-btn class="white--text" v-tooltip:bottom="{ html: 'Learn about Islam' }" flat>
+        Learn Islam
+      </v-btn>
 
-      <!-- Donate via PayPal or MOHIN (or some other payment tool) -->
-      <md-button>
-        <span>Donate</span>
-        <md-tooltip>Give Sadaqah</md-tooltip>
-      </md-button>
+      <!-- Donate via PayPal, MOHIN, or some other payment service -->
+      <v-btn class="white--text" v-tooltip:bottom="{ html: 'Give Sadaqah' }" flat>
+        Donate
+      </v-btn>
 
-      <!-- Get contact information -->
-      <md-menu md-size="6">
-        <md-button md-menu-trigger>Contact</md-button>
-
-        <md-menu-content>
-          <md-menu-item>
-            <div class="md-list-text-container">
-              <span>9501 24th Ave, East Elmhurst, NY 11369</span>
-              <span>Masjid Address</span>
-            </div>
-          </md-menu-item>
-          <md-menu-item>
-            <div class="md-list-text-container">
-              <span>(718) 779-2771</span>
-              <span>Masjid Phone Number</span>
-            </div>
-          </md-menu-item>
-          <md-menu-item>
-            <div class="md-list-text-container">
-              <span>contact@eejmc.org</span>
-              <span>Masjid Email</span>
-            </div>
-          </md-menu-item>
-          <md-divider></md-divider>
-          <md-menu-item>
-            <div class="md-list-text-container">
-              <span>syednashikaman@gmail.com</span>
-              <span>Technical Support</span>
-            </div>
-          </md-menu-item>
-        </md-menu-content>
-
-        <md-tooltip>Reach out to us!</md-tooltip>
-      </md-menu>
+      <!-- Get contact info, send support requests, etc. -->
+      <v-menu transition="slide-y-transition" offset-y offset-x bottom>
+        <v-btn class="white--text" slot="activator" v-tooltip:bottom="{ html: 'Reach out to us' }" flat>
+          Contact
+        </v-btn>
+        <v-list two-line>
+          <v-list-tile>
+            <v-list-tile-action>
+              <v-icon class="indigo--text">phone</v-icon>
+            </v-list-tile-action>
+            <v-list-tile-content>
+              <v-list-tile-title>(718) 779-2771</v-list-tile-title>
+              <v-list-tile-sub-title>Masjid Phone</v-list-tile-sub-title>
+            </v-list-tile-content>
+            <v-list-tile-action>
+              <v-icon dark>chat</v-icon>
+            </v-list-tile-action>
+          </v-list-tile>
+        <v-divider inset></v-divider>
+          <v-list-tile>
+            <v-list-tile-action>
+              <v-icon class="indigo--text">mail</v-icon>
+            </v-list-tile-action>
+            <v-list-tile-content>
+              <v-list-tile-title>contact@eejmc.org</v-list-tile-title>
+              <v-list-tile-sub-title>Masjid Email</v-list-tile-sub-title>
+            </v-list-tile-content>
+          </v-list-tile>
+          <v-list-tile>
+            <v-list-tile-action>
+              <v-icon class="indigo--text">mail</v-icon>
+            </v-list-tile-action>
+            <v-list-tile-content>
+              <v-list-tile-title>support@eejmc.org</v-list-tile-title>
+              <v-list-tile-sub-title>Technical Support</v-list-tile-sub-title>
+            </v-list-tile-content>
+          </v-list-tile>
+        <v-divider inset></v-divider>
+          <v-list-tile>
+            <v-list-tile-action>
+              <v-icon class="indigo--text">location_on</v-icon>
+            </v-list-tile-action>
+            <v-list-tile-content>
+              <v-list-tile-title>9501 24th Ave</v-list-tile-title>
+              <v-list-tile-sub-title>
+                East Elmhurst, NY 11369
+              </v-list-tile-sub-title>
+            </v-list-tile-content>
+          </v-list-tile>
+        </v-list>
+      </v-menu>
 
       <!-- Login to the app or direct user to sign up -->
-      <Login v-if="!isLoggedIn"/>
-      <!-- Button that directs user to the forums -->
-      <md-button @click.native="logout()" v-else>
+      <Login v-if="!isLoggedIn" />
+      <!-- Logout of the app and redirect to homepage -->
+      <v-btn v-else @click.native="logout()" class="white--text" v-tooltip:bottom="{ html: 'Log out of the app' }" flat>
         Logout
-      </md-button>
-    </div>
-  </md-toolbar>
+      </v-btn>
+    </v-toolbar-items>
+  </v-toolbar>
 </template>
 
 <script>
@@ -116,9 +125,8 @@
   // use global variables
   @import '../../styles/variables.sass'
 
+  // TODO: get the nav-toolbars actual height somehow dynamically
   .nav-toolbar
     height: $nav-toolbar-height
 
-    .text-content
-      padding-right: $bs * 3
 </style>
