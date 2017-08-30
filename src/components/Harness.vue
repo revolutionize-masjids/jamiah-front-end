@@ -2,7 +2,7 @@
 <!-- Contains anything that should be displayed in EVERY page -->
 
 <template>
-  <v-app>
+  <v-app light>
     <!-- Top navigation bar that contains title and essential buttons and info. Logging in, signing up, account info, open drawer button, etc. -->
     <!-- Listen for the open nav drawer event -->
     <NavToolbar @onOpenNavDrawer="openNavDrawer()" />

@@ -12,6 +12,7 @@
 
     <v-spacer></v-spacer>
 
+    <!-- Desktop action buttons -->
     <v-toolbar-items class="hidden-sm-and-down">
       <v-btn class="white--text" :to="{ name: 'Events' }" v-tooltip:bottom="{ html: 'Learn about the latest news and events' }" flat>
         News & Events
@@ -83,9 +84,14 @@
           </v-list-tile>
         </v-list>
       </v-menu>
+    </v-toolbar-items>
 
+    <!-- Mobile action buttons -->
+    <v-toolbar-items>
       <!-- Login to the app or direct user to sign up -->
-      <Login v-if="!isLoggedIn" />
+      <v-btn class="white--text" v-if="!isLoggedIn" slot="activator" v-tooltip:bottom="{ html: 'Log in to the app' }" flat>
+        Login / Signup
+      </v-btn>
       <!-- Logout of the app and redirect to homepage -->
       <v-btn v-else @click.native="logout()" class="white--text" v-tooltip:bottom="{ html: 'Log out of the app' }" flat>
         Logout
