@@ -8,7 +8,7 @@ action buttons. -->
 
     <!-- Company logo button that takes user to homepage. -->
     <v-toolbar-title>
-      <router-link :to="{ name: 'Home' }" tag="span" router-link-inactive>
+      <router-link :to="{ name: 'index' }" tag="span" router-link-inactive>
         Jamiah
       </router-link>
     </v-toolbar-title>
