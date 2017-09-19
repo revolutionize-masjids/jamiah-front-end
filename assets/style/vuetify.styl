@@ -1,0 +1,23 @@
+/**
+ * This configures and overrides the styles that comes default with Vuetify.
+ */
+
+// import built-in vuetify color variables
+@import '~vuetify/src/stylus/settings/_colors'
+
+/**
+ * The theme configuration for the whole app that sets the colors of classes.
+ * @type {Object}
+ */
+$theme := {
+  primary: $teal.base
+  accent: $teal.accent-2
+  secondary: $teal.darken-2
+  info: $blue.lighten-1
+  warning: $amber.darken-2
+  error: $red.accent-4
+  success: $green.lighten-2
+}
+
+// import built-in vuetify primary styles
+@import '~vuetify/src/stylus/main'
