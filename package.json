@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "nuxt": "^1.0.0-rc6",
+    "vee-validate": "^2.0.0-rc.17",
     "vuetify": "^0.15.7"
   },
   "devDependencies": {
