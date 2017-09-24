@@ -1,14 +1,14 @@
-<!-- A button that opens a menu which allows the user to login or sign up -->
+<!-- The login/signup dialog with social media logins. -->
 
 <template>
   <v-dialog v-model="isLoginDialogOpen" transition="dialog-bottom-transition" ref="login-menu" fullscreen>
-    <!-- Button that opens the dialog -->
+    <!-- Button that opens the dialog. -->
     <v-btn class="white--text" slot="activator" flat>Login / Signup</v-btn>
 
-    <!-- Dialog content -->
+    <!-- Dialog content. -->
     <v-card class="login-menu">
       <v-toolbar class="teal">
-        <!-- X button that closes the dialog -->
+        <!-- X button that closes the dialog. -->
         <v-btn @click.native="closeDialog" icon>
           <v-icon class="white--text">close</v-icon>
         </v-btn>
@@ -23,7 +23,7 @@
           <v-text-field v-model="emailInput" v-validate="'required|email'" label="Email" :error-messages="errors.first('email')" type="email" name="email" prepend-icon="mail" required></v-text-field>
 
           <!-- Save session to local storage -->
-          <v-checkbox v-model="shouldRemainSignedIn" v-bind:label="`Stay signed on`"></v-checkbox>
+          <v-checkbox v-model="shouldRemainSignedIn" :label="`Stay signed on`"></v-checkbox>
 
           <!-- Password -->
           <v-text-field v-model="passwordInput" v-validate="'required|alpha_dash|min:6'" :error-messages="errors.first('password')" label="Password" type="password" name="password" prepend-icon="lock" required></v-text-field>

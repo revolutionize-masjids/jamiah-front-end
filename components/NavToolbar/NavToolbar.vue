@@ -12,5 +12,19 @@ action buttons. -->
         Jamiah
       </router-link>
     </v-toolbar-title>
+
+    <v-spacer></v-spacer>
+
+    <Login />
   </v-toolbar>
 </template>
+
+<script>
+  import Login from '@/components/NavToolbar/Login'
+
+  export default {
+    components: {
+      Login
+    }
+  }
+</script>
