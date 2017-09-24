@@ -7,10 +7,14 @@
 import Vue from 'vue'
 import VeeValidate from 'vee-validate'
 
-/** configure how forms are validated */
+/**
+ * Configuration of how forms are validated.
+ * @type {Object}
+ */
 const config = {
   // debounce validation errors for 500 milliseconds
   delay: 500
 }
 
+// install Vee-Validate
 Vue.use(VeeValidate, config)
