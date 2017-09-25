@@ -1,15 +1,18 @@
 import { createBatchingNetworkInterface } from 'apollo-client'
 
-/**
- * Apollo client network interface options.
- * @type {[type]}
- */
-const networkInterface = createBatchingNetworkInterface({
+export default (ctx) => {
+  console.log(process.env[process.env.NODE_ENV])
   /**
-     * GraphQL API url based on the environment: dev, prod, etc.
-     * @type {String}
-     */
-  uri: process.env[process.env.NODE_ENV].api + '/graphql'
-})
+   * Apollo client network interface options.
+   * @type {[type]}
+   */
+  const networkInterface = createBatchingNetworkInterface({
+    /**
+       * GraphQL API url based on the environment: dev, prod, etc.
+       * @type {String}
+       */
+    uri: process.env[process.env.NODE_ENV] + '/graphql'
+  })
 
-export default networkInterface
+  return networkInterface
+}
