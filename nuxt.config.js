@@ -18,6 +18,14 @@ module.exports = {
   css: [
     '~/assets/style/app.styl'
   ],
+  // add apollo module
+  modules: ['@nuxtjs/apollo'],
+  // give apollo module options
+  apollo: {
+    networkInterfaces: {
+      default: '~/apollo/network-interfaces/default.js'
+    }
+  },
   /*
   ** Customize the progress-bar color
   */
