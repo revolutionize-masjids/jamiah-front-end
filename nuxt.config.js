@@ -14,6 +14,17 @@ module.exports = {
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' }
     ]
   },
+  env: {
+    production: {
+      // Use the production api hosted on AWS Elastic Computer Cloud
+      api: 'https://api.eejmc.org'
+    },
+    development: {
+      // Use the development API hosted locally
+      // NOTE: make sure to `$ yarn run dev` on the back end repo locally
+      api: 'http://localhost:8091'
+    }
+  },
   plugins: ['~/plugins/vuetify.js', '~/plugins/vee-validate.js'],
   css: [
     '~/assets/style/app.styl'
