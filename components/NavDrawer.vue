@@ -3,7 +3,7 @@ Contains important info and actions for the user. -->
 
 <template>
   <v-navigation-drawer v-model="isNavDrawerOpen" persistent>
-    <v-toolbar class="primary" flat dark>
+    <v-toolbar extended flat class="primary" dark>
       <v-toolbar-title>Navigation Drawer</v-toolbar-title>
     </v-toolbar>
   </v-navigation-drawer>
