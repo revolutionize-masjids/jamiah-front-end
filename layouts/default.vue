@@ -11,17 +11,20 @@
         </v-slide-y-transition>
       </v-container>
     </main>
+    <BottomNav />
   </v-app>
 </template>
 
 <script>
   import NavToolbar from '@/components/NavToolbar/NavToolbar.vue'
   import NavDrawer from '@/components/NavDrawer.vue'
+  import BottomNav from '@/components/BottomNav.vue'
 
   export default {
     components: {
       NavToolbar,
-      NavDrawer
+      NavDrawer,
+      BottomNav
     }
   }
 </script>
