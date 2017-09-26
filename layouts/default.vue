@@ -3,7 +3,6 @@
 <template>
   <v-app toolbar light>
     <NavToolbar />
-    <NavDrawer />
     <main>
       <v-container fluid>
         <v-slide-y-transition mode="out-in">
@@ -12,6 +11,7 @@
       </v-container>
     </main>
     <BottomNav />
+    <NavDrawer />
   </v-app>
 </template>
 
