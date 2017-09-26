@@ -1,21 +1,23 @@
 <!-- The login/signup dialog with social media logins. -->
 
 <template>
+  <!-- Dialog is fullscreen on mobile and normal on larger screens. -->
   <v-dialog v-model="isLoginDialogOpen" transition="dialog-bottom-transition" ref="login-menu" fullscreen>
     <!-- Button that opens the dialog. -->
-    <v-btn class="white--text" slot="activator" flat>Login</v-btn>
+    <v-btn slot="activator" dark flat>Login</v-btn>
 
     <!-- Dialog content. -->
     <v-card class="login-menu">
-      <v-toolbar class="teal">
-        <!-- X button that closes the dialog. -->
+      <!-- General info & actions. -->
+      <v-toolbar class="primary" dark>
+        <!-- X action button that closes the dialog. -->
         <v-btn @click.native="closeDialog" icon>
-          <v-icon class="white--text">close</v-icon>
+          <v-icon>close</v-icon>
         </v-btn>
-
-        <v-toolbar-title class="white--text">Login or Signup</v-toolbar-title>
+        <v-toolbar-title>Login or Signup</v-toolbar-title>
       </v-toolbar>
 
+      <!-- Main content of dialog. -->
       <v-card-text>
         <!-- Login form that validates credentials -->
         <form @submit.prevent="login()">
