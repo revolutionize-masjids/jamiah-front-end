@@ -2,7 +2,7 @@
 
 > Front end for Islamic social media non-profit app, server side rendered.
 
-## What is this project about?
+## What is This Project About?
 
 ### Introduction
 
@@ -20,21 +20,62 @@ An application that centralizes information (events, news, donations, etc.) into
 
 An application that streamlines the ability for an organization to create a profile webpage for their organization with good UX, acquire & connect with community members to grow its community, get funding, create content, spread news, and host events.
 
-## Build Setup
+## How do I contribute?
+
+You can send Pull Requests immediately and you can contact Syed Aman (syednashikaman@gmail.com) to get started.
+
+### Stack
+
+You would need to learn some of these technologies to be able to contribute
+
+- JavaScript ES8
+- Vue.js (front-end framework)
+- Apollo/GraphQL (Querying interface)
+- Vuetify (Material UI Toolkit)
+- Nuxt.js (Server Side Rendering framework)
+- HTML 5
+- Stylus (CSS Pre-Processor)
+
+For detailed explanation on how things work, checkout the [Vue.js official docs](https://vuejs.org), the [Vue Materials Docs](http://vuematerial.io/), and the [Mozilla Developer Network](https://mdn.org).
+
+### How do I Run this on my Machine?
+
+### Pre-requisites
+
+Make sure you have Node and Yarn installed
+
+```bash
+  # MAC OSX (using Homebrew)
+  brew install node
+  brew install yarn
+
+  # Windows (using Chocolatey)
+  choco install node
+  choco install yarn
+```
+
+### Clone the repo
+
+```bash
+  git clone https://github.com/revolutionize-masjids/jamiah-front-end.git
+  cd jamiah-front-end
+```
+
+### Run the dev server!
 
 ```bash
 # install dependencies
-$ npm install # Or yarn install
+$ yarn install # Or yarn install
 
 # serve with hot reload at localhost:3000
-$ npm run dev
+$ yarn run dev
 
 # build for production and launch server
-$ npm run build
-$ npm start
+$ yarn run build
+$ yarn start
 
 # generate static project
-$ npm run generate
+$ yarn run generate
 ```
 
 For detailed explanation on how things work, check out the [Nuxt.js](https://github.com/nuxt/nuxt.js) and [Vuetify.js](https://vuetifyjs.com/) documentation.
