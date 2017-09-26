@@ -2,14 +2,14 @@
 
 <template>
   <v-app toolbar light>
-    <NavToolbar></NavToolbar>
-    <NavDrawer></NavDrawer>
+    <NavToolbar />
+    <NavDrawer />
     <main>
-      <v-slide-y-transition mode="out-in">
-        <v-container fluid>
+      <v-container fluid>
+        <v-slide-y-transition mode="out-in">
           <nuxt />
-        </v-container>
-      </v-slide-y-transition>
+        </v-slide-y-transition>
+      </v-container>
     </main>
   </v-app>
 </template>
