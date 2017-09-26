@@ -4,7 +4,7 @@ pages of the app seamlessly. -->
 <template>
   <v-bottom-nav :value="true">
     <!-- Nav button that takes user to home page. -->
-    <v-btn :to="{ name: 'index' }" flat dark>
+    <v-btn :to="{ name: 'index' }" exact flat dark>
       <span>Home</span>
       <v-icon>home</v-icon>
     </v-btn>
