@@ -9,3 +9,6 @@ npm-debug.log
 
 # Nuxt generate
 dist
+
+# Ignore Mac OSX binary files
+.DS_Store
