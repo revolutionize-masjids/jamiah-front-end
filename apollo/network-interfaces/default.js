@@ -1,6 +1,7 @@
 import { createBatchingNetworkInterface } from 'apollo-client'
 
 export default (ctx) => {
+  // TODO: figure out how to use environment variables in Nuxt.js
   console.log(process.env[process.env.NODE_ENV])
   /**
    * Apollo client network interface options.

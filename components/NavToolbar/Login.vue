@@ -3,7 +3,7 @@
 <template>
   <v-dialog v-model="isLoginDialogOpen" transition="dialog-bottom-transition" ref="login-menu" fullscreen>
     <!-- Button that opens the dialog. -->
-    <v-btn class="white--text" slot="activator" flat>Login / Signup</v-btn>
+    <v-btn class="white--text" slot="activator" flat>Login</v-btn>
 
     <!-- Dialog content. -->
     <v-card class="login-menu">
