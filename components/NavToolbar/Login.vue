@@ -21,38 +21,40 @@
       <v-card-text>
         <!-- Login form that validates credentials -->
         <form @submit.prevent="login()">
-          <!-- Email -->
-          <v-text-field v-model="emailInput" v-validate="'required|email'" label="Email" :error-messages="errors.collect('email')" type="email" name="email" prepend-icon="mail" required></v-text-field>
+          <v-layout column>
+            <!-- Email -->
+            <v-text-field v-model="emailInput" v-validate="'required|email'" label="Email" :error-messages="errors.collect('email')" type="email" name="email" prepend-icon="mail" required></v-text-field>
 
-          <!-- Save session to local storage -->
-          <v-checkbox v-model="shouldRemainSignedIn" :label="`Stay signed on`"></v-checkbox>
+            <!-- Save session to local storage -->
+            <v-checkbox v-model="shouldRemainSignedIn" :label="`Stay signed on`" class="pt-0"></v-checkbox>
 
-          <!-- Password -->
-          <v-text-field v-model="passwordInput" v-validate="'required|alpha_dash|min:6'" :error-messages="errors.collect('password')" label="Password" type="password" name="password" prepend-icon="lock" required></v-text-field>
+            <!-- Password -->
+            <v-text-field v-model="passwordInput" v-validate="'required|alpha_dash|min:6'" :error-messages="errors.collect('password')" label="Password" type="password" name="password" prepend-icon="lock" required class="mb-5"></v-text-field>
 
-          <!-- Form submit button that prompts API to authenticate -->
-          <v-btn class="teal white--text" type="submit" raised>Login</v-btn>
+            <!-- Form submit button that prompts API to authenticate -->
+            <v-btn type="submit" dark raised class="primary ">Login</v-btn>
 
-          <!-- Beginning of social media logins -->
-          <v-divider></v-divider>
+            <!-- Beginning of social media logins -->
+            <v-divider class="mt-3 mb-3"></v-divider>
 
-          <!-- Facebook login -->
-          <v-btn class="blue darken-3 white--text" raised>
-            Login with Facebook
-          </v-btn>
+            <!-- Facebook login -->
+            <v-btn class="blue darken-3" dark raised>
+              Login with Facebook
+            </v-btn>
 
-          <!-- Google+ Login -->
-          <v-btn class="red lighten-2 white--text" raised>
-            Login with Google+
-          </v-btn>
+            <!-- Google+ Login -->
+            <v-btn class="red lighten-2" dark raised>
+              Login with Google+
+            </v-btn>
 
-          <!-- Redirect user to signup page -->
-          <p class="md-caption">
-            <span>New User?</span>
-            <router-link to="signup" @click.native="closeDialog()">
-              Sign up!
-            </router-link>
-          </p>
+            <!-- Redirect user to signup page -->
+            <p class="md-caption">
+              <span>New User?</span>
+              <router-link to="signup" @click.native="closeDialog()">
+                Sign up!
+              </router-link>
+            </p>
+          </v-layout>
         </form>
       </v-card-text>
     </v-card>
