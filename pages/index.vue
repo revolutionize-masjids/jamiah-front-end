@@ -1,3 +1,5 @@
+<!-- The app home page and default redirect page. -->
+
 <template>
   <v-layout column>
     <v-flex xs12 sm8 md6>

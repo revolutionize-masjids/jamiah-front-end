@@ -1,20 +1,27 @@
+<!-- This is the root component; the parent & first component that renders. -->
+
 <template>
-  <v-app light>
+  <v-app toolbar light>
     <NavToolbar></NavToolbar>
+    <NavDrawer></NavDrawer>
     <main>
-      <v-container fluid>
-        <nuxt />
-      </v-container>
+      <v-slide-y-transition mode="out-in">
+        <v-container fluid>
+          <nuxt />
+        </v-container>
+      </v-slide-y-transition>
     </main>
   </v-app>
 </template>
 
 <script>
-  import NavToolbar from '../components/NavToolbar/NavToolbar.vue'
+  import NavToolbar from '@/components/NavToolbar/NavToolbar.vue'
+  import NavDrawer from '@/components/NavDrawer.vue'
 
   export default {
     components: {
-      NavToolbar
+      NavToolbar,
+      NavDrawer
     },
     data () {
       return {

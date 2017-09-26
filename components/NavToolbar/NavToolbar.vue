@@ -4,7 +4,7 @@ action buttons. -->
 <template>
   <v-toolbar class="primary" dark dense fixed>
     <!-- Hamburger menu that open the navigation drawer. -->
-    <v-toolbar-side-icon @click.native="emitOpenNavDrawerEvent()" dark />
+    <v-toolbar-side-icon @click.native.stop="openNavDrawer" dark />
 
     <!-- Company logo button that takes user to homepage. -->
     <v-toolbar-title>
@@ -25,6 +25,11 @@ action buttons. -->
   export default {
     components: {
       Login
+    },
+    methods: {
+      openNavDrawer () {
+        this.$store.commit('setIsNavDrawerOpen', true)
+      }
     }
   }
 </script>
