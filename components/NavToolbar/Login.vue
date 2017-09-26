@@ -20,13 +20,13 @@
         <!-- Login form that validates credentials -->
         <form @submit.prevent="login()">
           <!-- Email -->
-          <v-text-field v-model="emailInput" v-validate="'required|email'" label="Email" :error-messages="errors.first('email')" type="email" name="email" prepend-icon="mail" required></v-text-field>
+          <v-text-field v-model="emailInput" v-validate="'required|email'" label="Email" :error-messages="errors.collect('email')" type="email" name="email" prepend-icon="mail" required></v-text-field>
 
           <!-- Save session to local storage -->
           <v-checkbox v-model="shouldRemainSignedIn" :label="`Stay signed on`"></v-checkbox>
 
           <!-- Password -->
-          <v-text-field v-model="passwordInput" v-validate="'required|alpha_dash|min:6'" :error-messages="errors.first('password')" label="Password" type="password" name="password" prepend-icon="lock" required></v-text-field>
+          <v-text-field v-model="passwordInput" v-validate="'required|alpha_dash|min:6'" :error-messages="errors.collect('password')" label="Password" type="password" name="password" prepend-icon="lock" required></v-text-field>
 
           <!-- Form submit button that prompts API to authenticate -->
           <v-btn class="teal white--text" type="submit" raised>Login</v-btn>
